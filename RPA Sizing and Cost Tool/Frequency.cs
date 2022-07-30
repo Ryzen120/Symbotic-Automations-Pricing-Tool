@@ -25,8 +25,8 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private int[] gStartPoint;
 
-        private int gLicenseCount;
-        private int gProcessCount;
+        private int? gLicenseCount;
+        private int? gProcessCount;
         private double gHoursSaved;
         private double gHourlyWage;
         private double gTotalSavings;
@@ -46,7 +46,10 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_TextBoxProcessCount_TextChanged(object sender, EventArgs e)
         {
-            gProcessCount = Int32.Parse(m_TextBoxProcessCount.Text);
+            if(!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            {
+                gProcessCount = Int32.Parse(m_TextBoxProcessCount.Text);
+            }
         }
 
         private void m_TextBoxHoursSaved_TextChanged(object sender, EventArgs e)
@@ -121,7 +124,7 @@ namespace RPA_Sizing_and_Cost_Tool
                 gStartPoint[0] = Location.X;
                 gStartPoint[1] = Location.Y;
             }
-            gDragging = true; 
+            gDragging = true;
         }
 
         private void m_PanelTitleBar_MouseUp(object sender, MouseEventArgs e)

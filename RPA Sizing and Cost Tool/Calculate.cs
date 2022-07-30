@@ -8,15 +8,15 @@ namespace RPA_Sizing_and_Cost_Tool
 {
     class Calculate
     {
-        private int gLicenseCount;
-        private int gProcessCount;
+        private int? gLicenseCount;
+        private int? gProcessCount;
         private double gHoursSaved;
         private double gHourlyWage;
         private double gTotalSavings;
 
         // Make some constants for license cost, tax rate, etc
 
-        public Calculate(int licenseCount, int processCount, double hoursSaved, double hourlyWage)
+        public Calculate(int? licenseCount, int? processCount, double hoursSaved, double hourlyWage)
         {
 
             gLicenseCount = licenseCount;
