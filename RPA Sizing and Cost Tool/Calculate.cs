@@ -30,6 +30,7 @@ namespace RPA_Sizing_and_Cost_Tool
 
         public double CalculateTotalSavings()
         {
+            // Testing comment for commit
             return gTotalSavings = gHoursSaved * gHourlyWage;
         }
 
