@@ -46,10 +46,10 @@
             this.m_LabelTotalBusinessProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalNetProfit = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_PanelTitleBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,29 +199,20 @@
             this.m_LabelMyTotalNetProfit.TabIndex = 19;
             this.m_LabelMyTotalNetProfit.Text = "My Total Net Profit";
             // 
-            // panel1
+            // m_PanelTitleBar
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 45);
-            this.panel1.TabIndex = 20;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(64, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(373, 25);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "RPA Frequency Tool";
+            this.m_PanelTitleBar.BackColor = System.Drawing.Color.Black;
+            this.m_PanelTitleBar.Controls.Add(this.label1);
+            this.m_PanelTitleBar.Controls.Add(this.pictureBox1);
+            this.m_PanelTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.m_PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_PanelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.m_PanelTitleBar.Name = "m_PanelTitleBar";
+            this.m_PanelTitleBar.Size = new System.Drawing.Size(800, 45);
+            this.m_PanelTitleBar.TabIndex = 20;
+            this.m_PanelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseDown);
+            this.m_PanelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseMove);
+            this.m_PanelTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseUp);
             // 
             // pictureBox1
             // 
@@ -235,13 +226,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(67, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Frequency Tool";
+            // 
             // Frequency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_PanelTitleBar);
             this.Controls.Add(this.m_LabelMyTotalNetProfit);
             this.Controls.Add(this.m_LabelMyTotalProfit);
             this.Controls.Add(this.m_LabelTotalBusinessProfit);
@@ -262,8 +263,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frequency";
             this.Text = "Frequency";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.m_PanelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,9 +289,9 @@
         private System.Windows.Forms.Label m_LabelTotalBusinessProfit;
         private System.Windows.Forms.Label m_LabelMyTotalProfit;
         private System.Windows.Forms.Label m_LabelMyTotalNetProfit;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel m_PanelTitleBar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
