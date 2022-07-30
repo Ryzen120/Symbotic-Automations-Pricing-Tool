@@ -27,9 +27,9 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private int? gLicenseCount;
         private int? gProcessCount;
-        private double gHoursSaved;
-        private double gHourlyWage;
-        private double gTotalSavings;
+        private double? gHoursSaved;
+        private double? gHourlyWage;
+        private double? gTotalSavings;
 
 
         public Frequency()
@@ -41,7 +41,10 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_TextBoxLicenseCount_TextChanged(object sender, EventArgs e)
         {
-            gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
+            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            {
+                gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
+            }
         }
 
         private void m_TextBoxProcessCount_TextChanged(object sender, EventArgs e)
@@ -54,12 +57,19 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_TextBoxHoursSaved_TextChanged(object sender, EventArgs e)
         {
-            gHoursSaved = Double.Parse(m_TextBoxHoursSaved.Text);
+            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            {
+                gHoursSaved = Double.Parse(m_TextBoxHoursSaved.Text);
+            }
         }
 
         private void m_TextBoxHourlyWage_TextChanged(object sender, EventArgs e)
         {
-            gHourlyWage = Double.Parse(m_TextBoxHourlyWage.Text);
+            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            {
+                gHourlyWage = Double.Parse(m_TextBoxHourlyWage.Text);
+            }
+            
         }
 
         private void m_RichTextBoxTotalBusinessSavings_TextChanged(object sender, EventArgs e)

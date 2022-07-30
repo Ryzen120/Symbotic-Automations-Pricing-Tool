@@ -10,13 +10,13 @@ namespace RPA_Sizing_and_Cost_Tool
     {
         private int? gLicenseCount;
         private int? gProcessCount;
-        private double gHoursSaved;
-        private double gHourlyWage;
-        private double gTotalSavings;
+        private double? gHoursSaved;
+        private double? gHourlyWage;
+        private double? gTotalSavings;
 
         // Make some constants for license cost, tax rate, etc
 
-        public Calculate(int? licenseCount, int? processCount, double hoursSaved, double hourlyWage)
+        public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage)
         {
 
             gLicenseCount = licenseCount;
@@ -28,7 +28,7 @@ namespace RPA_Sizing_and_Cost_Tool
             CalculateTotalSavings();
         }
 
-        public double CalculateTotalSavings()
+        public double? CalculateTotalSavings()
         {
             // Calcualte total savings from hours worked by employee and their corresponding wage
             return gTotalSavings = gHoursSaved * gHourlyWage;

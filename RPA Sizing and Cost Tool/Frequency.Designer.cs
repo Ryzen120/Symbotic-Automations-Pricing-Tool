@@ -47,8 +47,8 @@
             this.m_LabelMyTotalProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalNetProfit = new System.Windows.Forms.Label();
             this.m_PanelTitleBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -135,6 +135,7 @@
             // 
             this.m_RichTextBoxTotalBusinessSavings.Location = new System.Drawing.Point(564, 78);
             this.m_RichTextBoxTotalBusinessSavings.Name = "m_RichTextBoxTotalBusinessSavings";
+            this.m_RichTextBoxTotalBusinessSavings.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessSavings.Size = new System.Drawing.Size(100, 20);
             this.m_RichTextBoxTotalBusinessSavings.TabIndex = 12;
             this.m_RichTextBoxTotalBusinessSavings.TextChanged += new System.EventHandler(this.m_RichTextBoxTotalBusinessSavings_TextChanged);
@@ -143,6 +144,7 @@
             // 
             this.m_RichTextBoxTotalBusinessProfit.Location = new System.Drawing.Point(564, 104);
             this.m_RichTextBoxTotalBusinessProfit.Name = "m_RichTextBoxTotalBusinessProfit";
+            this.m_RichTextBoxTotalBusinessProfit.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessProfit.Size = new System.Drawing.Size(100, 20);
             this.m_RichTextBoxTotalBusinessProfit.TabIndex = 13;
             this.m_RichTextBoxTotalBusinessProfit.TextChanged += new System.EventHandler(this.m_RichTextBoxTotalBusinessProfit_TextChanged);
@@ -151,6 +153,7 @@
             // 
             this.m_RichTextBoxMyTotalProfit.Location = new System.Drawing.Point(564, 130);
             this.m_RichTextBoxMyTotalProfit.Name = "m_RichTextBoxMyTotalProfit";
+            this.m_RichTextBoxMyTotalProfit.ReadOnly = true;
             this.m_RichTextBoxMyTotalProfit.Size = new System.Drawing.Size(100, 20);
             this.m_RichTextBoxMyTotalProfit.TabIndex = 14;
             this.m_RichTextBoxMyTotalProfit.TextChanged += new System.EventHandler(this.m_RichTextBoxMyTotalProfit_TextChanged);
@@ -159,6 +162,7 @@
             // 
             this.m_RichTextBoxMyNetProfit.Location = new System.Drawing.Point(564, 156);
             this.m_RichTextBoxMyNetProfit.Name = "m_RichTextBoxMyNetProfit";
+            this.m_RichTextBoxMyNetProfit.ReadOnly = true;
             this.m_RichTextBoxMyNetProfit.Size = new System.Drawing.Size(100, 20);
             this.m_RichTextBoxMyNetProfit.TabIndex = 15;
             this.m_RichTextBoxMyNetProfit.TextChanged += new System.EventHandler(this.m_RichTextBoxMyNetProfit_TextChanged);
@@ -214,6 +218,16 @@
             this.m_PanelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseMove);
             this.m_PanelTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseUp);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(67, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Frequency Tool";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
@@ -225,16 +239,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(67, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Frequency Tool";
             // 
             // Frequency
             // 
