@@ -262,5 +262,15 @@ namespace RPA_Sizing_and_Cost_Tool
                 e.Handled = true;
             }
         }
+
+        private void m_ButtonCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void m_ButtonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

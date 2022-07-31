@@ -49,6 +49,8 @@
             this.m_PanelTitleBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.m_ButtonCloseApp = new System.Windows.Forms.Button();
+            this.m_ButtonMinimize = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -210,6 +212,8 @@
             // m_PanelTitleBar
             // 
             this.m_PanelTitleBar.BackColor = System.Drawing.Color.Black;
+            this.m_PanelTitleBar.Controls.Add(this.m_ButtonMinimize);
+            this.m_PanelTitleBar.Controls.Add(this.m_ButtonCloseApp);
             this.m_PanelTitleBar.Controls.Add(this.label1);
             this.m_PanelTitleBar.Controls.Add(this.pictureBox1);
             this.m_PanelTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -244,6 +248,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // m_ButtonCloseApp
+            // 
+            this.m_ButtonCloseApp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonCloseApp.Location = new System.Drawing.Point(754, 7);
+            this.m_ButtonCloseApp.Name = "m_ButtonCloseApp";
+            this.m_ButtonCloseApp.Size = new System.Drawing.Size(34, 30);
+            this.m_ButtonCloseApp.TabIndex = 2;
+            this.m_ButtonCloseApp.Text = "X";
+            this.m_ButtonCloseApp.UseVisualStyleBackColor = true;
+            this.m_ButtonCloseApp.Click += new System.EventHandler(this.m_ButtonCloseApp_Click);
+            // 
+            // m_ButtonMinimize
+            // 
+            this.m_ButtonMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonMinimize.Location = new System.Drawing.Point(714, 7);
+            this.m_ButtonMinimize.Name = "m_ButtonMinimize";
+            this.m_ButtonMinimize.Size = new System.Drawing.Size(34, 30);
+            this.m_ButtonMinimize.TabIndex = 3;
+            this.m_ButtonMinimize.Text = "-";
+            this.m_ButtonMinimize.UseVisualStyleBackColor = true;
+            this.m_ButtonMinimize.Click += new System.EventHandler(this.m_ButtonMinimize_Click);
+            // 
             // Frequency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +295,7 @@
             this.Controls.Add(this.m_TextBoxLicenseCount);
             this.Controls.Add(this.m_TextBoxProcessCount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frequency";
             this.Text = "Frequency";
             this.m_PanelTitleBar.ResumeLayout(false);
@@ -300,6 +327,8 @@
         private System.Windows.Forms.Panel m_PanelTitleBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button m_ButtonCloseApp;
+        private System.Windows.Forms.Button m_ButtonMinimize;
     }
 }
 
