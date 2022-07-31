@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+
+
 
 namespace RPA_Sizing_and_Cost_Tool
 {
@@ -41,35 +44,82 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_TextBoxLicenseCount_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxLicenseCount.Text, " ^ [0-9]"))
             {
-                gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
+                m_TextBoxLicenseCount.Text = "";
+            }
+            else
+            {
+                if(!String.IsNullOrEmpty(m_TextBoxLicenseCount.Text))
+                {
+                    gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
+                }
+                else
+                {
+                    m_TextBoxLicenseCount.Text = "0";
+                    gLicenseCount = 0;
+                }
             }
         }
 
         private void m_TextBoxProcessCount_TextChanged(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxProcessCount.Text, " ^ [0-9]"))
             {
-                gProcessCount = Int32.Parse(m_TextBoxProcessCount.Text);
+                m_TextBoxProcessCount.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+                {
+                    gProcessCount = Int32.Parse(m_TextBoxProcessCount.Text);
+                }
+                else
+                {
+                    m_TextBoxProcessCount.Text = "0";
+                    gProcessCount = 0;
+                }
             }
         }
-
+        
         private void m_TextBoxHoursSaved_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHoursSaved.Text, " ^ [0-9]"))
             {
-                gHoursSaved = Double.Parse(m_TextBoxHoursSaved.Text);
+                m_TextBoxHoursSaved.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHoursSaved.Text))
+                {
+                    gHoursSaved = Double.Parse(m_TextBoxHoursSaved.Text);
+                }
+                else
+                {
+                    m_TextBoxHoursSaved.Text = "0";
+                    gHoursSaved = 0;
+                }
             }
         }
 
         private void m_TextBoxHourlyWage_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHourlyWage.Text, " ^ [0-9]"))
             {
-                gHourlyWage = Double.Parse(m_TextBoxHourlyWage.Text);
+                m_TextBoxHourlyWage.Text = "";
             }
-            
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHourlyWage.Text))
+                {
+                    gHourlyWage = Double.Parse(m_TextBoxHourlyWage.Text);
+                }
+                else
+                {
+                    m_TextBoxHourlyWage.Text = "0";
+                    gHourlyWage = 0;
+                }
+            }
         }
 
         private void m_RichTextBoxTotalBusinessSavings_TextChanged(object sender, EventArgs e)
@@ -94,6 +144,11 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_ButtonStart_Click(object sender, EventArgs e)
         {
+            m_RichTextBoxTotalBusinessSavings.Text = "0";
+            m_RichTextBoxTotalBusinessProfit.Text = "0";
+            m_RichTextBoxMyTotalProfit.Text = "0";
+            m_RichTextBoxMyNetProfit.Text = "0";
+
             Calculate calc = new Calculate(gLicenseCount, gProcessCount, gHoursSaved, gHourlyWage);
 
             gTotalSavings = calc.CalculateTotalSavings();
@@ -145,6 +200,66 @@ namespace RPA_Sizing_and_Cost_Tool
             if(p.Y < 2)
             {
                 this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void m_TextBoxLicenseCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void m_TextBoxProcessCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void m_TextBoxHoursSaved_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void m_TextBoxHourlyWage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

@@ -60,6 +60,7 @@
             this.m_TextBoxProcessCount.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxProcessCount.TabIndex = 0;
             this.m_TextBoxProcessCount.TextChanged += new System.EventHandler(this.m_TextBoxProcessCount_TextChanged);
+            this.m_TextBoxProcessCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxProcessCount_KeyPress);
             // 
             // m_TextBoxLicenseCount
             // 
@@ -68,6 +69,7 @@
             this.m_TextBoxLicenseCount.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxLicenseCount.TabIndex = 1;
             this.m_TextBoxLicenseCount.TextChanged += new System.EventHandler(this.m_TextBoxLicenseCount_TextChanged);
+            this.m_TextBoxLicenseCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxLicenseCount_KeyPress);
             // 
             // m_TextBoxHoursSaved
             // 
@@ -76,6 +78,7 @@
             this.m_TextBoxHoursSaved.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHoursSaved.TabIndex = 4;
             this.m_TextBoxHoursSaved.TextChanged += new System.EventHandler(this.m_TextBoxHoursSaved_TextChanged);
+            this.m_TextBoxHoursSaved.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxHoursSaved_KeyPress);
             // 
             // m_LabelLicenseCount
             // 
@@ -111,6 +114,7 @@
             this.m_TextBoxHourlyWage.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHourlyWage.TabIndex = 8;
             this.m_TextBoxHourlyWage.TextChanged += new System.EventHandler(this.m_TextBoxHourlyWage_TextChanged);
+            this.m_TextBoxHourlyWage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxHourlyWage_KeyPress);
             // 
             // m_LabelHourlyWage
             // 
