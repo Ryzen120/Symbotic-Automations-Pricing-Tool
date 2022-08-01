@@ -303,5 +303,35 @@ namespace RPA_Sizing_and_Cost_Tool
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void m_CheckBoxSmall_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_CheckBoxMedium_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_CheckBoxLarge_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

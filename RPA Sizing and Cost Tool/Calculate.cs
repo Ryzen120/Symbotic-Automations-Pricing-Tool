@@ -17,8 +17,6 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gMyProfit;
         private double? gMyNetProfit;
 
-        // Make some constants for license cost, tax rate, etc
-
         public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage)
         {
 

@@ -51,8 +51,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_ButtonCloseApp = new System.Windows.Forms.Button();
             this.m_ButtonMinimize = new System.Windows.Forms.Button();
+            this.m_RichTextBoxLoggingOutput = new System.Windows.Forms.RichTextBox();
+            this.m_LabelLoggingOutput = new System.Windows.Forms.Label();
+            this.m_CheckBoxSmall = new System.Windows.Forms.CheckBox();
+            this.m_CheckBoxMedium = new System.Windows.Forms.CheckBox();
+            this.m_CheckBoxLarge = new System.Windows.Forms.CheckBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // m_TextBoxProcessCount
@@ -139,7 +150,7 @@
             // 
             // m_RichTextBoxTotalBusinessSavings
             // 
-            this.m_RichTextBoxTotalBusinessSavings.Location = new System.Drawing.Point(564, 78);
+            this.m_RichTextBoxTotalBusinessSavings.Location = new System.Drawing.Point(337, 78);
             this.m_RichTextBoxTotalBusinessSavings.Name = "m_RichTextBoxTotalBusinessSavings";
             this.m_RichTextBoxTotalBusinessSavings.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessSavings.Size = new System.Drawing.Size(100, 20);
@@ -148,7 +159,7 @@
             // 
             // m_RichTextBoxTotalBusinessProfit
             // 
-            this.m_RichTextBoxTotalBusinessProfit.Location = new System.Drawing.Point(564, 104);
+            this.m_RichTextBoxTotalBusinessProfit.Location = new System.Drawing.Point(337, 104);
             this.m_RichTextBoxTotalBusinessProfit.Name = "m_RichTextBoxTotalBusinessProfit";
             this.m_RichTextBoxTotalBusinessProfit.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessProfit.Size = new System.Drawing.Size(100, 20);
@@ -157,7 +168,7 @@
             // 
             // m_RichTextBoxMyTotalProfit
             // 
-            this.m_RichTextBoxMyTotalProfit.Location = new System.Drawing.Point(564, 130);
+            this.m_RichTextBoxMyTotalProfit.Location = new System.Drawing.Point(337, 130);
             this.m_RichTextBoxMyTotalProfit.Name = "m_RichTextBoxMyTotalProfit";
             this.m_RichTextBoxMyTotalProfit.ReadOnly = true;
             this.m_RichTextBoxMyTotalProfit.Size = new System.Drawing.Size(100, 20);
@@ -166,7 +177,7 @@
             // 
             // m_RichTextBoxMyNetProfit
             // 
-            this.m_RichTextBoxMyNetProfit.Location = new System.Drawing.Point(564, 156);
+            this.m_RichTextBoxMyNetProfit.Location = new System.Drawing.Point(337, 156);
             this.m_RichTextBoxMyNetProfit.Name = "m_RichTextBoxMyNetProfit";
             this.m_RichTextBoxMyNetProfit.ReadOnly = true;
             this.m_RichTextBoxMyNetProfit.Size = new System.Drawing.Size(100, 20);
@@ -176,7 +187,7 @@
             // m_LabelTotalBusinessSavings
             // 
             this.m_LabelTotalBusinessSavings.AutoSize = true;
-            this.m_LabelTotalBusinessSavings.Location = new System.Drawing.Point(441, 81);
+            this.m_LabelTotalBusinessSavings.Location = new System.Drawing.Point(214, 81);
             this.m_LabelTotalBusinessSavings.Name = "m_LabelTotalBusinessSavings";
             this.m_LabelTotalBusinessSavings.Size = new System.Drawing.Size(117, 13);
             this.m_LabelTotalBusinessSavings.TabIndex = 16;
@@ -185,7 +196,7 @@
             // m_LabelTotalBusinessProfit
             // 
             this.m_LabelTotalBusinessProfit.AutoSize = true;
-            this.m_LabelTotalBusinessProfit.Location = new System.Drawing.Point(455, 107);
+            this.m_LabelTotalBusinessProfit.Location = new System.Drawing.Point(228, 107);
             this.m_LabelTotalBusinessProfit.Name = "m_LabelTotalBusinessProfit";
             this.m_LabelTotalBusinessProfit.Size = new System.Drawing.Size(103, 13);
             this.m_LabelTotalBusinessProfit.TabIndex = 17;
@@ -194,7 +205,7 @@
             // m_LabelMyTotalProfit
             // 
             this.m_LabelMyTotalProfit.AutoSize = true;
-            this.m_LabelMyTotalProfit.Location = new System.Drawing.Point(483, 133);
+            this.m_LabelMyTotalProfit.Location = new System.Drawing.Point(256, 133);
             this.m_LabelMyTotalProfit.Name = "m_LabelMyTotalProfit";
             this.m_LabelMyTotalProfit.Size = new System.Drawing.Size(75, 13);
             this.m_LabelMyTotalProfit.TabIndex = 18;
@@ -203,7 +214,7 @@
             // m_LabelMyTotalNetProfit
             // 
             this.m_LabelMyTotalNetProfit.AutoSize = true;
-            this.m_LabelMyTotalNetProfit.Location = new System.Drawing.Point(463, 159);
+            this.m_LabelMyTotalNetProfit.Location = new System.Drawing.Point(236, 159);
             this.m_LabelMyTotalNetProfit.Name = "m_LabelMyTotalNetProfit";
             this.m_LabelMyTotalNetProfit.Size = new System.Drawing.Size(95, 13);
             this.m_LabelMyTotalNetProfit.TabIndex = 19;
@@ -270,12 +281,99 @@
             this.m_ButtonMinimize.UseVisualStyleBackColor = true;
             this.m_ButtonMinimize.Click += new System.EventHandler(this.m_ButtonMinimize_Click);
             // 
+            // m_RichTextBoxLoggingOutput
+            // 
+            this.m_RichTextBoxLoggingOutput.Location = new System.Drawing.Point(511, 97);
+            this.m_RichTextBoxLoggingOutput.Name = "m_RichTextBoxLoggingOutput";
+            this.m_RichTextBoxLoggingOutput.ReadOnly = true;
+            this.m_RichTextBoxLoggingOutput.Size = new System.Drawing.Size(224, 177);
+            this.m_RichTextBoxLoggingOutput.TabIndex = 21;
+            this.m_RichTextBoxLoggingOutput.Text = "";
+            // 
+            // m_LabelLoggingOutput
+            // 
+            this.m_LabelLoggingOutput.AutoSize = true;
+            this.m_LabelLoggingOutput.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_LabelLoggingOutput.Location = new System.Drawing.Point(560, 75);
+            this.m_LabelLoggingOutput.Name = "m_LabelLoggingOutput";
+            this.m_LabelLoggingOutput.Size = new System.Drawing.Size(129, 19);
+            this.m_LabelLoggingOutput.TabIndex = 22;
+            this.m_LabelLoggingOutput.Text = "Logging Output";
+            // 
+            // m_CheckBoxSmall
+            // 
+            this.m_CheckBoxSmall.AutoSize = true;
+            this.m_CheckBoxSmall.Location = new System.Drawing.Point(50, 234);
+            this.m_CheckBoxSmall.Name = "m_CheckBoxSmall";
+            this.m_CheckBoxSmall.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m_CheckBoxSmall.Size = new System.Drawing.Size(51, 17);
+            this.m_CheckBoxSmall.TabIndex = 23;
+            this.m_CheckBoxSmall.Text = "Small";
+            this.m_CheckBoxSmall.UseVisualStyleBackColor = true;
+            this.m_CheckBoxSmall.CheckedChanged += new System.EventHandler(this.m_CheckBoxSmall_CheckedChanged);
+            // 
+            // m_CheckBoxMedium
+            // 
+            this.m_CheckBoxMedium.AutoSize = true;
+            this.m_CheckBoxMedium.Location = new System.Drawing.Point(38, 260);
+            this.m_CheckBoxMedium.Name = "m_CheckBoxMedium";
+            this.m_CheckBoxMedium.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m_CheckBoxMedium.Size = new System.Drawing.Size(63, 17);
+            this.m_CheckBoxMedium.TabIndex = 24;
+            this.m_CheckBoxMedium.Text = "Medium";
+            this.m_CheckBoxMedium.UseVisualStyleBackColor = true;
+            this.m_CheckBoxMedium.CheckedChanged += new System.EventHandler(this.m_CheckBoxMedium_CheckedChanged);
+            // 
+            // m_CheckBoxLarge
+            // 
+            this.m_CheckBoxLarge.AutoSize = true;
+            this.m_CheckBoxLarge.Location = new System.Drawing.Point(48, 286);
+            this.m_CheckBoxLarge.Name = "m_CheckBoxLarge";
+            this.m_CheckBoxLarge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.m_CheckBoxLarge.Size = new System.Drawing.Size(53, 17);
+            this.m_CheckBoxLarge.TabIndex = 25;
+            this.m_CheckBoxLarge.Text = "Large";
+            this.m_CheckBoxLarge.UseVisualStyleBackColor = true;
+            this.m_CheckBoxLarge.CheckedChanged += new System.EventHandler(this.m_CheckBoxLarge_CheckedChanged);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(109, 231);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 29;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(109, 257);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 30;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(109, 283);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown3.TabIndex = 31;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
             // Frequency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.m_CheckBoxLarge);
+            this.Controls.Add(this.m_CheckBoxMedium);
+            this.Controls.Add(this.m_CheckBoxSmall);
+            this.Controls.Add(this.m_LabelLoggingOutput);
+            this.Controls.Add(this.m_RichTextBoxLoggingOutput);
             this.Controls.Add(this.m_PanelTitleBar);
             this.Controls.Add(this.m_LabelMyTotalNetProfit);
             this.Controls.Add(this.m_LabelMyTotalProfit);
@@ -300,6 +398,9 @@
             this.Text = "Frequency";
             this.m_PanelTitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,6 +430,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button m_ButtonCloseApp;
         private System.Windows.Forms.Button m_ButtonMinimize;
+        private System.Windows.Forms.RichTextBox m_RichTextBoxLoggingOutput;
+        private System.Windows.Forms.Label m_LabelLoggingOutput;
+        private System.Windows.Forms.CheckBox m_CheckBoxSmall;
+        private System.Windows.Forms.CheckBox m_CheckBoxMedium;
+        private System.Windows.Forms.CheckBox m_CheckBoxLarge;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }
 
