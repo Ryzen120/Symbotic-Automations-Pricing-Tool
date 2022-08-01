@@ -72,6 +72,7 @@
     <Compile Include="Frequency.Designer.cs">
       <DependentUpon>Frequency.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frequency.resx">

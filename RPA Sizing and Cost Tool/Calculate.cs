@@ -13,6 +13,9 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gHoursSaved;
         private double? gHourlyWage;
         private double? gTotalSavings;
+        private double? gTotalBusinessProfit;
+        private double? gMyProfit;
+        private double? gMyNetProfit;
 
         // Make some constants for license cost, tax rate, etc
 
@@ -26,27 +29,37 @@ namespace RPA_Sizing_and_Cost_Tool
 
 
             CalculateTotalSavings();
+
+            CalculateTotalBusinessProfit();
+
+            CalculateMyProfit();
+
+            CalculateMyNetProfit();
+
         }
 
         public double? CalculateTotalSavings()
         {
             // Calcualte total savings from hours worked by employee and their corresponding wage
-            return gTotalSavings = gHoursSaved * gHourlyWage;
+            return gTotalSavings = ((gHoursSaved * gHourlyWage) *4) * gProcessCount;
         }
 
-        public double CalculateTotalBusinessProfit()
+        public double? CalculateTotalBusinessProfit()
         {
-            return 0;
+            gTotalBusinessProfit = gTotalSavings - (Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * gProcessCount));
+            return gTotalBusinessProfit;
         }
 
-        public double CalculateMyProfit()
+        public double? CalculateMyProfit()
         {
-            return 0;
+            gMyProfit = Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * gProcessCount);
+            return gMyProfit;
         }
 
-        public double CalculateMyNetProfit()
+        public double? CalculateMyNetProfit()
         {
-            return 0;
+            gMyNetProfit = gMyProfit - (gMyProfit * Globals.MO_TAX_RATE_2021);
+            return gMyNetProfit;
         }
 
     }

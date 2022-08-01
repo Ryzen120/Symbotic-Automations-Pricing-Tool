@@ -33,6 +33,9 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gHoursSaved;
         private double? gHourlyWage;
         private double? gTotalSavings;
+        private double? gTotalBusinessProfit;
+        private double? gMyProfit;
+        private double? gMyNetProfit;
 
 
         public Frequency()
@@ -129,17 +132,17 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_RichTextBoxTotalBusinessProfit_TextChanged(object sender, EventArgs e)
         {
-
+            m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
         }
 
         private void m_RichTextBoxMyTotalProfit_TextChanged(object sender, EventArgs e)
         {
-
+            m_RichTextBoxMyTotalProfit.Text = gMyProfit.ToString();
         }
 
         private void m_RichTextBoxMyNetProfit_TextChanged(object sender, EventArgs e)
         {
-
+            m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
         }
 
         private void m_ButtonStart_Click(object sender, EventArgs e)
@@ -154,7 +157,19 @@ namespace RPA_Sizing_and_Cost_Tool
             gTotalSavings = calc.CalculateTotalSavings();
 
             m_RichTextBoxTotalBusinessSavings.Text = gTotalSavings.ToString();
-           
+
+            gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
+
+            m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
+
+            gMyProfit = calc.CalculateMyProfit();
+
+            m_RichTextBoxMyTotalProfit.Text = gMyProfit.ToString();
+
+            gMyNetProfit = calc.CalculateMyNetProfit();
+
+            m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
+
         }
 
         private void m_PanelTitleBar_MouseMove(object sender, MouseEventArgs e)
