@@ -154,20 +154,36 @@ namespace RPA_Sizing_and_Cost_Tool
 
             Calculate calc = new Calculate(gLicenseCount, gProcessCount, gHoursSaved, gHourlyWage);
 
-            gTotalSavings = calc.CalculateTotalSavings();
+            // If either hours saved or hourly wage is null, we cant calculate total savings, so throw error.
+            if(!(gHoursSaved == null) || !(gHourlyWage == null))
+            {
+                gTotalSavings = calc.CalculateTotalSavings();
 
-            m_RichTextBoxTotalBusinessSavings.Text = gTotalSavings.ToString();
+                m_RichTextBoxTotalBusinessSavings.Text = gTotalSavings.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Hours saved or Hourly wage was left empty, cannot calculate total savings.", "Error: Cant calculate field");
+            }
+            
+            // If we dont have total savings calculated, we cant calculate the busiess profit
+            if(!(gTotalSavings == null))
+            {
+                gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
 
-            gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
+                m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Total savings could not be calculated, cannot calculate total business profit.", "Error: Cant calculate field");
+            }
 
-            m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
-
+            // My profit is based on globals values, so cant be null.
             gMyProfit = calc.CalculateMyProfit();
-
             m_RichTextBoxMyTotalProfit.Text = gMyProfit.ToString();
 
+            // My profit is based on globals values, so cant be null.
             gMyNetProfit = calc.CalculateMyNetProfit();
-
             m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
 
         }
