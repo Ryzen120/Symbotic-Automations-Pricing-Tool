@@ -424,7 +424,7 @@
             this.m_ButtonScript.TabIndex = 1;
             this.m_ButtonScript.Text = "Script";
             this.m_ButtonScript.UseVisualStyleBackColor = true;
-            this.m_ButtonScript.Click += new System.EventHandler(this.button1_Click);
+            this.m_ButtonScript.Click += new System.EventHandler(this.m_ButtonScript_Click);
             // 
             // m_ButtonTool
             // 
@@ -437,7 +437,7 @@
             this.m_ButtonTool.TabIndex = 2;
             this.m_ButtonTool.Text = "Tool";
             this.m_ButtonTool.UseVisualStyleBackColor = true;
-            this.m_ButtonTool.Click += new System.EventHandler(this.button2_Click);
+            this.m_ButtonTool.Click += new System.EventHandler(this.m_ButtonTool_Click);
             // 
             // Frequency
             // 
