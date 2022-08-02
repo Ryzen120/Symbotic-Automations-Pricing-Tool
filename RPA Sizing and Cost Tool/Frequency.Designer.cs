@@ -63,8 +63,8 @@
             this.m_LabelMyTotalCost = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_ButtonRPA = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.m_ButtonScript = new System.Windows.Forms.Button();
+            this.m_ButtonTool = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -392,8 +392,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.m_ButtonTool);
+            this.panel1.Controls.Add(this.m_ButtonScript);
             this.panel1.Controls.Add(this.m_ButtonRPA);
             this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Name = "panel1";
@@ -411,30 +411,33 @@
             this.m_ButtonRPA.TabIndex = 0;
             this.m_ButtonRPA.Text = "RPA";
             this.m_ButtonRPA.UseVisualStyleBackColor = true;
+            this.m_ButtonRPA.Click += new System.EventHandler(this.m_ButtonRPA_Click);
             // 
-            // button1
+            // m_ButtonScript
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(3, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 49);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Script";
-            this.button1.UseVisualStyleBackColor = true;
+            this.m_ButtonScript.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonScript.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonScript.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonScript.Location = new System.Drawing.Point(3, 61);
+            this.m_ButtonScript.Name = "m_ButtonScript";
+            this.m_ButtonScript.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonScript.TabIndex = 1;
+            this.m_ButtonScript.Text = "Script";
+            this.m_ButtonScript.UseVisualStyleBackColor = true;
+            this.m_ButtonScript.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // m_ButtonTool
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(3, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Tool";
-            this.button2.UseVisualStyleBackColor = true;
+            this.m_ButtonTool.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonTool.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonTool.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonTool.Location = new System.Drawing.Point(3, 110);
+            this.m_ButtonTool.Name = "m_ButtonTool";
+            this.m_ButtonTool.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonTool.TabIndex = 2;
+            this.m_ButtonTool.Text = "Tool";
+            this.m_ButtonTool.UseVisualStyleBackColor = true;
+            this.m_ButtonTool.Click += new System.EventHandler(this.button2_Click);
             // 
             // Frequency
             // 
@@ -522,8 +525,8 @@
         private System.Windows.Forms.Label m_LabelMyTotalCost;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button m_ButtonRPA;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button m_ButtonTool;
+        private System.Windows.Forms.Button m_ButtonScript;
     }
 }
 

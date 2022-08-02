@@ -344,5 +344,20 @@ namespace RPA_Sizing_and_Cost_Tool
         {
 
         }
+
+        private void m_ButtonRPA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_ButtonScript_Click(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void m_ButtonTool_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
