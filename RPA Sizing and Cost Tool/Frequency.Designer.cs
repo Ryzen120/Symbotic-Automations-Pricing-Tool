@@ -47,10 +47,10 @@
             this.m_LabelMyTotalProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalNetProfit = new System.Windows.Forms.Label();
             this.m_PanelTitleBar = new System.Windows.Forms.Panel();
+            this.m_ButtonMinimize = new System.Windows.Forms.Button();
+            this.m_ButtonCloseApp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.m_ButtonCloseApp = new System.Windows.Forms.Button();
-            this.m_ButtonMinimize = new System.Windows.Forms.Button();
             this.m_RichTextBoxLoggingOutput = new System.Windows.Forms.RichTextBox();
             this.m_LabelLoggingOutput = new System.Windows.Forms.Label();
             this.m_CheckBoxSmall = new System.Windows.Forms.CheckBox();
@@ -59,44 +59,51 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.m_RichTextBoxMyTotalCost = new System.Windows.Forms.TextBox();
+            this.m_LabelMyTotalCost = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.m_ButtonRPA = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_TextBoxProcessCount
             // 
-            this.m_TextBoxProcessCount.Location = new System.Drawing.Point(109, 104);
+            this.m_TextBoxProcessCount.Location = new System.Drawing.Point(197, 100);
             this.m_TextBoxProcessCount.Name = "m_TextBoxProcessCount";
             this.m_TextBoxProcessCount.Size = new System.Drawing.Size(100, 20);
-            this.m_TextBoxProcessCount.TabIndex = 0;
+            this.m_TextBoxProcessCount.TabIndex = 1;
             this.m_TextBoxProcessCount.TextChanged += new System.EventHandler(this.m_TextBoxProcessCount_TextChanged);
             this.m_TextBoxProcessCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxProcessCount_KeyPress);
             // 
             // m_TextBoxLicenseCount
             // 
-            this.m_TextBoxLicenseCount.Location = new System.Drawing.Point(109, 78);
+            this.m_TextBoxLicenseCount.Location = new System.Drawing.Point(197, 74);
             this.m_TextBoxLicenseCount.Name = "m_TextBoxLicenseCount";
             this.m_TextBoxLicenseCount.Size = new System.Drawing.Size(100, 20);
-            this.m_TextBoxLicenseCount.TabIndex = 1;
+            this.m_TextBoxLicenseCount.TabIndex = 0;
             this.m_TextBoxLicenseCount.TextChanged += new System.EventHandler(this.m_TextBoxLicenseCount_TextChanged);
             this.m_TextBoxLicenseCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxLicenseCount_KeyPress);
             // 
             // m_TextBoxHoursSaved
             // 
-            this.m_TextBoxHoursSaved.Location = new System.Drawing.Point(109, 130);
+            this.m_TextBoxHoursSaved.Location = new System.Drawing.Point(197, 126);
             this.m_TextBoxHoursSaved.Name = "m_TextBoxHoursSaved";
             this.m_TextBoxHoursSaved.Size = new System.Drawing.Size(100, 20);
-            this.m_TextBoxHoursSaved.TabIndex = 4;
+            this.m_TextBoxHoursSaved.TabIndex = 2;
             this.m_TextBoxHoursSaved.TextChanged += new System.EventHandler(this.m_TextBoxHoursSaved_TextChanged);
             this.m_TextBoxHoursSaved.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxHoursSaved_KeyPress);
             // 
             // m_LabelLicenseCount
             // 
             this.m_LabelLicenseCount.AutoSize = true;
-            this.m_LabelLicenseCount.Location = new System.Drawing.Point(28, 81);
+            this.m_LabelLicenseCount.Location = new System.Drawing.Point(116, 77);
             this.m_LabelLicenseCount.Name = "m_LabelLicenseCount";
             this.m_LabelLicenseCount.Size = new System.Drawing.Size(75, 13);
             this.m_LabelLicenseCount.TabIndex = 5;
@@ -105,7 +112,7 @@
             // m_LabelProcessCount
             // 
             this.m_LabelProcessCount.AutoSize = true;
-            this.m_LabelProcessCount.Location = new System.Drawing.Point(27, 107);
+            this.m_LabelProcessCount.Location = new System.Drawing.Point(115, 103);
             this.m_LabelProcessCount.Name = "m_LabelProcessCount";
             this.m_LabelProcessCount.Size = new System.Drawing.Size(76, 13);
             this.m_LabelProcessCount.TabIndex = 6;
@@ -114,7 +121,7 @@
             // m_LabelHourSaved
             // 
             this.m_LabelHourSaved.AutoSize = true;
-            this.m_LabelHourSaved.Location = new System.Drawing.Point(39, 133);
+            this.m_LabelHourSaved.Location = new System.Drawing.Point(127, 129);
             this.m_LabelHourSaved.Name = "m_LabelHourSaved";
             this.m_LabelHourSaved.Size = new System.Drawing.Size(64, 13);
             this.m_LabelHourSaved.TabIndex = 7;
@@ -122,17 +129,17 @@
             // 
             // m_TextBoxHourlyWage
             // 
-            this.m_TextBoxHourlyWage.Location = new System.Drawing.Point(109, 156);
+            this.m_TextBoxHourlyWage.Location = new System.Drawing.Point(197, 152);
             this.m_TextBoxHourlyWage.Name = "m_TextBoxHourlyWage";
             this.m_TextBoxHourlyWage.Size = new System.Drawing.Size(100, 20);
-            this.m_TextBoxHourlyWage.TabIndex = 8;
+            this.m_TextBoxHourlyWage.TabIndex = 3;
             this.m_TextBoxHourlyWage.TextChanged += new System.EventHandler(this.m_TextBoxHourlyWage_TextChanged);
             this.m_TextBoxHourlyWage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_TextBoxHourlyWage_KeyPress);
             // 
             // m_LabelHourlyWage
             // 
             this.m_LabelHourlyWage.AutoSize = true;
-            this.m_LabelHourlyWage.Location = new System.Drawing.Point(34, 159);
+            this.m_LabelHourlyWage.Location = new System.Drawing.Point(122, 155);
             this.m_LabelHourlyWage.Name = "m_LabelHourlyWage";
             this.m_LabelHourlyWage.Size = new System.Drawing.Size(69, 13);
             this.m_LabelHourlyWage.TabIndex = 9;
@@ -140,17 +147,21 @@
             // 
             // m_ButtonStart
             // 
-            this.m_ButtonStart.Location = new System.Drawing.Point(362, 415);
+            this.m_ButtonStart.BackColor = System.Drawing.Color.Black;
+            this.m_ButtonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.m_ButtonStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonStart.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonStart.Location = new System.Drawing.Point(377, 401);
             this.m_ButtonStart.Name = "m_ButtonStart";
-            this.m_ButtonStart.Size = new System.Drawing.Size(75, 23);
+            this.m_ButtonStart.Size = new System.Drawing.Size(75, 37);
             this.m_ButtonStart.TabIndex = 11;
             this.m_ButtonStart.Text = "Process";
-            this.m_ButtonStart.UseVisualStyleBackColor = true;
+            this.m_ButtonStart.UseVisualStyleBackColor = false;
             this.m_ButtonStart.Click += new System.EventHandler(this.m_ButtonStart_Click);
             // 
             // m_RichTextBoxTotalBusinessSavings
             // 
-            this.m_RichTextBoxTotalBusinessSavings.Location = new System.Drawing.Point(337, 78);
+            this.m_RichTextBoxTotalBusinessSavings.Location = new System.Drawing.Point(427, 74);
             this.m_RichTextBoxTotalBusinessSavings.Name = "m_RichTextBoxTotalBusinessSavings";
             this.m_RichTextBoxTotalBusinessSavings.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessSavings.Size = new System.Drawing.Size(100, 20);
@@ -159,7 +170,7 @@
             // 
             // m_RichTextBoxTotalBusinessProfit
             // 
-            this.m_RichTextBoxTotalBusinessProfit.Location = new System.Drawing.Point(337, 104);
+            this.m_RichTextBoxTotalBusinessProfit.Location = new System.Drawing.Point(427, 100);
             this.m_RichTextBoxTotalBusinessProfit.Name = "m_RichTextBoxTotalBusinessProfit";
             this.m_RichTextBoxTotalBusinessProfit.ReadOnly = true;
             this.m_RichTextBoxTotalBusinessProfit.Size = new System.Drawing.Size(100, 20);
@@ -168,7 +179,7 @@
             // 
             // m_RichTextBoxMyTotalProfit
             // 
-            this.m_RichTextBoxMyTotalProfit.Location = new System.Drawing.Point(337, 130);
+            this.m_RichTextBoxMyTotalProfit.Location = new System.Drawing.Point(427, 126);
             this.m_RichTextBoxMyTotalProfit.Name = "m_RichTextBoxMyTotalProfit";
             this.m_RichTextBoxMyTotalProfit.ReadOnly = true;
             this.m_RichTextBoxMyTotalProfit.Size = new System.Drawing.Size(100, 20);
@@ -177,7 +188,7 @@
             // 
             // m_RichTextBoxMyNetProfit
             // 
-            this.m_RichTextBoxMyNetProfit.Location = new System.Drawing.Point(337, 156);
+            this.m_RichTextBoxMyNetProfit.Location = new System.Drawing.Point(427, 178);
             this.m_RichTextBoxMyNetProfit.Name = "m_RichTextBoxMyNetProfit";
             this.m_RichTextBoxMyNetProfit.ReadOnly = true;
             this.m_RichTextBoxMyNetProfit.Size = new System.Drawing.Size(100, 20);
@@ -187,7 +198,7 @@
             // m_LabelTotalBusinessSavings
             // 
             this.m_LabelTotalBusinessSavings.AutoSize = true;
-            this.m_LabelTotalBusinessSavings.Location = new System.Drawing.Point(214, 81);
+            this.m_LabelTotalBusinessSavings.Location = new System.Drawing.Point(304, 77);
             this.m_LabelTotalBusinessSavings.Name = "m_LabelTotalBusinessSavings";
             this.m_LabelTotalBusinessSavings.Size = new System.Drawing.Size(117, 13);
             this.m_LabelTotalBusinessSavings.TabIndex = 16;
@@ -196,7 +207,7 @@
             // m_LabelTotalBusinessProfit
             // 
             this.m_LabelTotalBusinessProfit.AutoSize = true;
-            this.m_LabelTotalBusinessProfit.Location = new System.Drawing.Point(228, 107);
+            this.m_LabelTotalBusinessProfit.Location = new System.Drawing.Point(318, 103);
             this.m_LabelTotalBusinessProfit.Name = "m_LabelTotalBusinessProfit";
             this.m_LabelTotalBusinessProfit.Size = new System.Drawing.Size(103, 13);
             this.m_LabelTotalBusinessProfit.TabIndex = 17;
@@ -205,7 +216,7 @@
             // m_LabelMyTotalProfit
             // 
             this.m_LabelMyTotalProfit.AutoSize = true;
-            this.m_LabelMyTotalProfit.Location = new System.Drawing.Point(256, 133);
+            this.m_LabelMyTotalProfit.Location = new System.Drawing.Point(346, 129);
             this.m_LabelMyTotalProfit.Name = "m_LabelMyTotalProfit";
             this.m_LabelMyTotalProfit.Size = new System.Drawing.Size(75, 13);
             this.m_LabelMyTotalProfit.TabIndex = 18;
@@ -214,7 +225,7 @@
             // m_LabelMyTotalNetProfit
             // 
             this.m_LabelMyTotalNetProfit.AutoSize = true;
-            this.m_LabelMyTotalNetProfit.Location = new System.Drawing.Point(236, 159);
+            this.m_LabelMyTotalNetProfit.Location = new System.Drawing.Point(326, 181);
             this.m_LabelMyTotalNetProfit.Name = "m_LabelMyTotalNetProfit";
             this.m_LabelMyTotalNetProfit.Size = new System.Drawing.Size(95, 13);
             this.m_LabelMyTotalNetProfit.TabIndex = 19;
@@ -223,29 +234,51 @@
             // m_PanelTitleBar
             // 
             this.m_PanelTitleBar.BackColor = System.Drawing.Color.Black;
+            this.m_PanelTitleBar.Controls.Add(this.pictureBox1);
             this.m_PanelTitleBar.Controls.Add(this.m_ButtonMinimize);
             this.m_PanelTitleBar.Controls.Add(this.m_ButtonCloseApp);
             this.m_PanelTitleBar.Controls.Add(this.label1);
-            this.m_PanelTitleBar.Controls.Add(this.pictureBox1);
             this.m_PanelTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.m_PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_PanelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.m_PanelTitleBar.Name = "m_PanelTitleBar";
-            this.m_PanelTitleBar.Size = new System.Drawing.Size(800, 45);
+            this.m_PanelTitleBar.Size = new System.Drawing.Size(800, 56);
             this.m_PanelTitleBar.TabIndex = 20;
             this.m_PanelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseDown);
             this.m_PanelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseMove);
             this.m_PanelTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseUp);
             // 
+            // m_ButtonMinimize
+            // 
+            this.m_ButtonMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonMinimize.Location = new System.Drawing.Point(714, 13);
+            this.m_ButtonMinimize.Name = "m_ButtonMinimize";
+            this.m_ButtonMinimize.Size = new System.Drawing.Size(34, 30);
+            this.m_ButtonMinimize.TabIndex = 3;
+            this.m_ButtonMinimize.Text = "-";
+            this.m_ButtonMinimize.UseVisualStyleBackColor = true;
+            this.m_ButtonMinimize.Click += new System.EventHandler(this.m_ButtonMinimize_Click);
+            // 
+            // m_ButtonCloseApp
+            // 
+            this.m_ButtonCloseApp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonCloseApp.Location = new System.Drawing.Point(754, 13);
+            this.m_ButtonCloseApp.Name = "m_ButtonCloseApp";
+            this.m_ButtonCloseApp.Size = new System.Drawing.Size(34, 30);
+            this.m_ButtonCloseApp.TabIndex = 2;
+            this.m_ButtonCloseApp.Text = "X";
+            this.m_ButtonCloseApp.UseVisualStyleBackColor = true;
+            this.m_ButtonCloseApp.Click += new System.EventHandler(this.m_ButtonCloseApp_Click);
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(67, 9);
+            this.label1.Location = new System.Drawing.Point(76, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.Size = new System.Drawing.Size(306, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Frequency Tool";
+            this.label1.Text = "Frequency Tool - Job Pricing";
             // 
             // pictureBox1
             // 
@@ -254,39 +287,17 @@
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(79, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // m_ButtonCloseApp
-            // 
-            this.m_ButtonCloseApp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_ButtonCloseApp.Location = new System.Drawing.Point(754, 7);
-            this.m_ButtonCloseApp.Name = "m_ButtonCloseApp";
-            this.m_ButtonCloseApp.Size = new System.Drawing.Size(34, 30);
-            this.m_ButtonCloseApp.TabIndex = 2;
-            this.m_ButtonCloseApp.Text = "X";
-            this.m_ButtonCloseApp.UseVisualStyleBackColor = true;
-            this.m_ButtonCloseApp.Click += new System.EventHandler(this.m_ButtonCloseApp_Click);
-            // 
-            // m_ButtonMinimize
-            // 
-            this.m_ButtonMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_ButtonMinimize.Location = new System.Drawing.Point(714, 7);
-            this.m_ButtonMinimize.Name = "m_ButtonMinimize";
-            this.m_ButtonMinimize.Size = new System.Drawing.Size(34, 30);
-            this.m_ButtonMinimize.TabIndex = 3;
-            this.m_ButtonMinimize.Text = "-";
-            this.m_ButtonMinimize.UseVisualStyleBackColor = true;
-            this.m_ButtonMinimize.Click += new System.EventHandler(this.m_ButtonMinimize_Click);
-            // 
             // m_RichTextBoxLoggingOutput
             // 
-            this.m_RichTextBoxLoggingOutput.Location = new System.Drawing.Point(511, 97);
+            this.m_RichTextBoxLoggingOutput.Location = new System.Drawing.Point(567, 97);
             this.m_RichTextBoxLoggingOutput.Name = "m_RichTextBoxLoggingOutput";
             this.m_RichTextBoxLoggingOutput.ReadOnly = true;
-            this.m_RichTextBoxLoggingOutput.Size = new System.Drawing.Size(224, 177);
+            this.m_RichTextBoxLoggingOutput.Size = new System.Drawing.Size(202, 177);
             this.m_RichTextBoxLoggingOutput.TabIndex = 21;
             this.m_RichTextBoxLoggingOutput.Text = "";
             // 
@@ -294,7 +305,7 @@
             // 
             this.m_LabelLoggingOutput.AutoSize = true;
             this.m_LabelLoggingOutput.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_LabelLoggingOutput.Location = new System.Drawing.Point(560, 75);
+            this.m_LabelLoggingOutput.Location = new System.Drawing.Point(605, 75);
             this.m_LabelLoggingOutput.Name = "m_LabelLoggingOutput";
             this.m_LabelLoggingOutput.Size = new System.Drawing.Size(129, 19);
             this.m_LabelLoggingOutput.TabIndex = 22;
@@ -303,7 +314,7 @@
             // m_CheckBoxSmall
             // 
             this.m_CheckBoxSmall.AutoSize = true;
-            this.m_CheckBoxSmall.Location = new System.Drawing.Point(50, 234);
+            this.m_CheckBoxSmall.Location = new System.Drawing.Point(118, 203);
             this.m_CheckBoxSmall.Name = "m_CheckBoxSmall";
             this.m_CheckBoxSmall.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m_CheckBoxSmall.Size = new System.Drawing.Size(51, 17);
@@ -315,7 +326,7 @@
             // m_CheckBoxMedium
             // 
             this.m_CheckBoxMedium.AutoSize = true;
-            this.m_CheckBoxMedium.Location = new System.Drawing.Point(38, 260);
+            this.m_CheckBoxMedium.Location = new System.Drawing.Point(106, 229);
             this.m_CheckBoxMedium.Name = "m_CheckBoxMedium";
             this.m_CheckBoxMedium.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m_CheckBoxMedium.Size = new System.Drawing.Size(63, 17);
@@ -327,7 +338,7 @@
             // m_CheckBoxLarge
             // 
             this.m_CheckBoxLarge.AutoSize = true;
-            this.m_CheckBoxLarge.Location = new System.Drawing.Point(48, 286);
+            this.m_CheckBoxLarge.Location = new System.Drawing.Point(116, 255);
             this.m_CheckBoxLarge.Name = "m_CheckBoxLarge";
             this.m_CheckBoxLarge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m_CheckBoxLarge.Size = new System.Drawing.Size(53, 17);
@@ -338,7 +349,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(109, 231);
+            this.numericUpDown1.Location = new System.Drawing.Point(177, 200);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 29;
@@ -346,7 +357,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(109, 257);
+            this.numericUpDown2.Location = new System.Drawing.Point(177, 226);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 30;
@@ -354,11 +365,76 @@
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(109, 283);
+            this.numericUpDown3.Location = new System.Drawing.Point(177, 252);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 31;
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // m_RichTextBoxMyTotalCost
+            // 
+            this.m_RichTextBoxMyTotalCost.Location = new System.Drawing.Point(427, 152);
+            this.m_RichTextBoxMyTotalCost.Name = "m_RichTextBoxMyTotalCost";
+            this.m_RichTextBoxMyTotalCost.ReadOnly = true;
+            this.m_RichTextBoxMyTotalCost.Size = new System.Drawing.Size(100, 20);
+            this.m_RichTextBoxMyTotalCost.TabIndex = 32;
+            this.m_RichTextBoxMyTotalCost.TextChanged += new System.EventHandler(this.m_RichTextBoxMyTotalCost_TextChanged);
+            // 
+            // m_LabelMyTotalCost
+            // 
+            this.m_LabelMyTotalCost.AutoSize = true;
+            this.m_LabelMyTotalCost.Location = new System.Drawing.Point(349, 155);
+            this.m_LabelMyTotalCost.Name = "m_LabelMyTotalCost";
+            this.m_LabelMyTotalCost.Size = new System.Drawing.Size(72, 13);
+            this.m_LabelMyTotalCost.TabIndex = 33;
+            this.m_LabelMyTotalCost.Text = "My Total Cost";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.m_ButtonRPA);
+            this.panel1.Location = new System.Drawing.Point(0, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(82, 396);
+            this.panel1.TabIndex = 34;
+            // 
+            // m_ButtonRPA
+            // 
+            this.m_ButtonRPA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonRPA.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonRPA.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonRPA.Location = new System.Drawing.Point(3, 14);
+            this.m_ButtonRPA.Name = "m_ButtonRPA";
+            this.m_ButtonRPA.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonRPA.TabIndex = 0;
+            this.m_ButtonRPA.Text = "RPA";
+            this.m_ButtonRPA.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 49);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Script";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(3, 110);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 49);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Tool";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Frequency
             // 
@@ -366,6 +442,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_LabelMyTotalCost);
+            this.Controls.Add(this.m_RichTextBoxMyTotalCost);
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
@@ -401,6 +480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,6 +518,12 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.TextBox m_RichTextBoxMyTotalCost;
+        private System.Windows.Forms.Label m_LabelMyTotalCost;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button m_ButtonRPA;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

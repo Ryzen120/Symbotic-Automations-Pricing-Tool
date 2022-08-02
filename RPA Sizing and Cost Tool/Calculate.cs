@@ -16,6 +16,8 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gTotalBusinessProfit;
         private double? gMyProfit;
         private double? gMyNetProfit;
+        private double? gMyTotalCost;
+
 
         public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage)
         {
@@ -33,6 +35,8 @@ namespace RPA_Sizing_and_Cost_Tool
             CalculateMyProfit();
 
             CalculateMyNetProfit();
+
+            CalculateMyTotalCost();
 
         }
 
@@ -54,10 +58,21 @@ namespace RPA_Sizing_and_Cost_Tool
             return gMyProfit;
         }
 
+        public double? CalculateTaxDeducted()
+        {
+            return gMyProfit * Globals.MO_TAX_RATE_2021;
+        }
+
         public double? CalculateMyNetProfit()
         {
-            gMyNetProfit = gMyProfit - (gMyProfit * Globals.MO_TAX_RATE_2021);
+            gMyNetProfit = (gMyProfit - CalculateMyTotalCost());
             return gMyNetProfit;
+        }
+
+        public double? CalculateMyTotalCost()
+        {
+            gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + CalculateTaxDeducted();
+            return gMyTotalCost;
         }
 
     }

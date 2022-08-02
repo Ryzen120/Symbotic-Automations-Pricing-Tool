@@ -36,6 +36,7 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gTotalBusinessProfit;
         private double? gMyProfit;
         private double? gMyNetProfit;
+        private double? gMyTotalCost;
 
 
         public Frequency()
@@ -145,6 +146,11 @@ namespace RPA_Sizing_and_Cost_Tool
             m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
         }
 
+        private void m_RichTextBoxMyTotalCost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void m_ButtonStart_Click(object sender, EventArgs e)
         {
             m_RichTextBoxTotalBusinessSavings.Text = "0";
@@ -185,6 +191,11 @@ namespace RPA_Sizing_and_Cost_Tool
             // My profit is based on globals values, so cant be null.
             gMyNetProfit = calc.CalculateMyNetProfit();
             m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
+
+            gMyTotalCost = calc.CalculateMyTotalCost();
+            m_RichTextBoxMyTotalCost.Text = gMyTotalCost.ToString();
+
+
 
         }
 

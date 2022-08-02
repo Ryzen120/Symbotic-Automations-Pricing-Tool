@@ -15,12 +15,12 @@ namespace RPA_Sizing_and_Cost_Tool
         public static double LICENSE_COST = 980.00;
 
         // Charging scheme for each size of process
-        public static double DEV_FEE_SMALL = 275.00;
-        public static double DEV_FEE_MEDIUM = 375.00;
-        public static double DEV_FEE_LARGE = 550.00;
+        public static double DEV_FEE_SMALL = 375.00;
+        public static double DEV_FEE_MEDIUM = 550.00;
+        public static double DEV_FEE_LARGE = 750.00;
 
         // Profit gained on each license sold
-        public static double DEV_FEE_PERCENTAGE = 0.6;
+        public static double DEV_FEE_PERCENTAGE = 0.85;
         public static double DEV_FEE_LICENSE_PROFIT = LICENSE_COST * DEV_FEE_PERCENTAGE;
 
         // Tax rate for state of operation
