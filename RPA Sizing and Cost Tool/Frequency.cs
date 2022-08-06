@@ -15,13 +15,6 @@ namespace RPA_Sizing_and_Cost_Tool
 {
     public partial class Frequency : Form
     {
-        /*
-        private string gLicenseCount;
-        private string gProcessCount;
-        private string gHoursSaved;
-        private string gHourlyWage;
-        */
-
         private Point gStartLocation;
 
         private bool gDragging;
@@ -41,6 +34,7 @@ namespace RPA_Sizing_and_Cost_Tool
 
         public Frequency()
         {
+            // Init
             InitializeComponent();
 
             gStartPoint = new int[2];
