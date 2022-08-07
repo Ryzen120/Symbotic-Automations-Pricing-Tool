@@ -18,14 +18,22 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gMyNetProfit;
         private double? gMyTotalCost;
 
+        private decimal? gProcessCountSmall;
+        private decimal? gProcessCountMedium;
+        private decimal? gProcessCountLarge;
 
-        public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage)
+
+        public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage, decimal? processCountSmall, decimal?  processCountMedium, decimal? processCountLarge)
         {
 
             gLicenseCount = licenseCount;
             gProcessCount = processCount;
             gHoursSaved = hoursSaved;
             gHourlyWage = hourlyWage;
+
+            gProcessCountSmall = processCountSmall;
+            gProcessCountMedium = processCountMedium;
+            gProcessCountLarge = processCountLarge;
 
 
             CalculateTotalSavings();

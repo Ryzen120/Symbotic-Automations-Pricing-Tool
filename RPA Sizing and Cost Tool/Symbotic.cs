@@ -31,6 +31,9 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gMyNetProfit;
         private double? gMyTotalCost;
 
+        private decimal? gProcessCountSmall;
+        private decimal? gProcessCountMedium;
+        private decimal? gProcessCountLarge;
 
         public Symbotic()
         {
@@ -152,7 +155,7 @@ namespace RPA_Sizing_and_Cost_Tool
             m_RichTextBoxMyTotalProfit.Text = "0";
             m_RichTextBoxMyNetProfit.Text = "0";
 
-            Calculate calc = new Calculate(gLicenseCount, gProcessCount, gHoursSaved, gHourlyWage);
+            Calculate calc = new Calculate(gLicenseCount, gProcessCount, gHoursSaved, gHourlyWage, gProcessCountSmall, gProcessCountMedium, gProcessCountLarge);
 
             // If either hours saved or hourly wage is null, we cant calculate total savings, so throw error.
             if(!(gHoursSaved == null) || !(gHourlyWage == null))
@@ -350,17 +353,17 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_NumericUpDownSmall_ValueChanged(object sender, EventArgs e)
         {
-
+            gProcessCountSmall = m_NumericUpDownSmall.Value;
         }
 
         private void m_NumericUpDownMedium_ValueChanged(object sender, EventArgs e)
         {
-
+            gProcessCountMedium = m_NumericUpDownMedium.Value;
         }
 
         private void m_NumericUpDownLarge_ValueChanged(object sender, EventArgs e)
         {
-
+            gProcessCountLarge = m_NumericUpDownLarge.Value;
         }
 
         private void m_ButtonRPA_Click(object sender, EventArgs e)
