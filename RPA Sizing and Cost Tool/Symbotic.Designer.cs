@@ -47,18 +47,18 @@
             this.m_LabelMyTotalProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalNetProfit = new System.Windows.Forms.Label();
             this.m_PanelTitleBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.m_PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.m_ButtonMinimize = new System.Windows.Forms.Button();
             this.m_ButtonCloseApp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_LabelTitleBar = new System.Windows.Forms.Label();
             this.m_RichTextBoxLoggingOutput = new System.Windows.Forms.RichTextBox();
             this.m_LabelLoggingOutput = new System.Windows.Forms.Label();
             this.m_CheckBoxSmall = new System.Windows.Forms.CheckBox();
             this.m_CheckBoxMedium = new System.Windows.Forms.CheckBox();
             this.m_CheckBoxLarge = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.m_NumericUpDownSmall = new System.Windows.Forms.NumericUpDown();
+            this.m_NumericUpDownMedium = new System.Windows.Forms.NumericUpDown();
+            this.m_NumericUpDownLarge = new System.Windows.Forms.NumericUpDown();
             this.m_RichTextBoxMyTotalCost = new System.Windows.Forms.TextBox();
             this.m_LabelMyTotalCost = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,10 +66,10 @@
             this.m_ButtonScript = new System.Windows.Forms.Button();
             this.m_ButtonRPA = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_PictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownSmall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownMedium)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownLarge)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,10 +234,10 @@
             // m_PanelTitleBar
             // 
             this.m_PanelTitleBar.BackColor = System.Drawing.Color.Black;
-            this.m_PanelTitleBar.Controls.Add(this.pictureBox1);
+            this.m_PanelTitleBar.Controls.Add(this.m_PictureBoxLogo);
             this.m_PanelTitleBar.Controls.Add(this.m_ButtonMinimize);
             this.m_PanelTitleBar.Controls.Add(this.m_ButtonCloseApp);
-            this.m_PanelTitleBar.Controls.Add(this.label1);
+            this.m_PanelTitleBar.Controls.Add(this.m_LabelTitleBar);
             this.m_PanelTitleBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.m_PanelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_PanelTitleBar.Location = new System.Drawing.Point(0, 0);
@@ -248,17 +248,17 @@
             this.m_PanelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseMove);
             this.m_PanelTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseUp);
             // 
-            // pictureBox1
+            // m_PictureBoxLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.m_PictureBoxLogo.BackColor = System.Drawing.Color.Black;
+            this.m_PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("m_PictureBoxLogo.Image")));
+            this.m_PictureBoxLogo.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_PictureBoxLogo.InitialImage")));
+            this.m_PictureBoxLogo.Location = new System.Drawing.Point(0, 0);
+            this.m_PictureBoxLogo.Name = "m_PictureBoxLogo";
+            this.m_PictureBoxLogo.Size = new System.Drawing.Size(79, 50);
+            this.m_PictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.m_PictureBoxLogo.TabIndex = 0;
+            this.m_PictureBoxLogo.TabStop = false;
             // 
             // m_ButtonMinimize
             // 
@@ -282,15 +282,15 @@
             this.m_ButtonCloseApp.UseVisualStyleBackColor = true;
             this.m_ButtonCloseApp.Click += new System.EventHandler(this.m_ButtonCloseApp_Click);
             // 
-            // label1
+            // m_LabelTitleBar
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(76, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Symbotic Automations - Pricing Tool";
+            this.m_LabelTitleBar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_LabelTitleBar.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_LabelTitleBar.Location = new System.Drawing.Point(76, 15);
+            this.m_LabelTitleBar.Name = "m_LabelTitleBar";
+            this.m_LabelTitleBar.Size = new System.Drawing.Size(376, 27);
+            this.m_LabelTitleBar.TabIndex = 1;
+            this.m_LabelTitleBar.Text = "Symbotic Automations - Pricing Tool";
             // 
             // m_RichTextBoxLoggingOutput
             // 
@@ -347,32 +347,32 @@
             this.m_CheckBoxLarge.UseVisualStyleBackColor = true;
             this.m_CheckBoxLarge.CheckedChanged += new System.EventHandler(this.m_CheckBoxLarge_CheckedChanged);
             // 
-            // numericUpDown1
+            // m_NumericUpDownSmall
             // 
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(177, 200);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 29;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.m_NumericUpDownSmall.Enabled = false;
+            this.m_NumericUpDownSmall.Location = new System.Drawing.Point(177, 200);
+            this.m_NumericUpDownSmall.Name = "m_NumericUpDownSmall";
+            this.m_NumericUpDownSmall.Size = new System.Drawing.Size(120, 20);
+            this.m_NumericUpDownSmall.TabIndex = 29;
+            this.m_NumericUpDownSmall.ValueChanged += new System.EventHandler(this.m_NumericUpDownSmall_ValueChanged);
             // 
-            // numericUpDown2
+            // m_NumericUpDownMedium
             // 
-            this.numericUpDown2.Enabled = false ;
-            this.numericUpDown2.Location = new System.Drawing.Point(177, 226);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 30;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.m_NumericUpDownMedium.Enabled = false ;
+            this.m_NumericUpDownMedium.Location = new System.Drawing.Point(177, 226);
+            this.m_NumericUpDownMedium.Name = "m_NumericUpDownMedium";
+            this.m_NumericUpDownMedium.Size = new System.Drawing.Size(120, 20);
+            this.m_NumericUpDownMedium.TabIndex = 30;
+            this.m_NumericUpDownMedium.ValueChanged += new System.EventHandler(this.m_NumericUpDownMedium_ValueChanged);
             // 
-            // numericUpDown3
+            // m_NumericUpDownLarge
             // 
-            this.numericUpDown3.Enabled = false;
-            this.numericUpDown3.Location = new System.Drawing.Point(177, 252);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 31;
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            this.m_NumericUpDownLarge.Enabled = false;
+            this.m_NumericUpDownLarge.Location = new System.Drawing.Point(177, 252);
+            this.m_NumericUpDownLarge.Name = "m_NumericUpDownLarge";
+            this.m_NumericUpDownLarge.Size = new System.Drawing.Size(120, 20);
+            this.m_NumericUpDownLarge.TabIndex = 31;
+            this.m_NumericUpDownLarge.ValueChanged += new System.EventHandler(this.m_NumericUpDownLarge_ValueChanged);
             // 
             // m_RichTextBoxMyTotalCost
             // 
@@ -442,7 +442,7 @@
             this.m_ButtonRPA.UseVisualStyleBackColor = true;
             this.m_ButtonRPA.Click += new System.EventHandler(this.m_ButtonRPA_Click);
             // 
-            // Frequency
+            // Symbotic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -451,9 +451,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_LabelMyTotalCost);
             this.Controls.Add(this.m_RichTextBoxMyTotalCost);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.m_NumericUpDownLarge);
+            this.Controls.Add(this.m_NumericUpDownMedium);
+            this.Controls.Add(this.m_NumericUpDownSmall);
             this.Controls.Add(this.m_CheckBoxLarge);
             this.Controls.Add(this.m_CheckBoxMedium);
             this.Controls.Add(this.m_CheckBoxSmall);
@@ -482,10 +482,10 @@
             this.Name = "Frequency";
             this.Text = "Frequency";
             this.m_PanelTitleBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_PictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownSmall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownMedium)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownLarge)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -512,8 +512,8 @@
         private System.Windows.Forms.Label m_LabelMyTotalProfit;
         private System.Windows.Forms.Label m_LabelMyTotalNetProfit;
         private System.Windows.Forms.Panel m_PanelTitleBar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox m_PictureBoxLogo;
+        private System.Windows.Forms.Label m_LabelTitleBar;
         private System.Windows.Forms.Button m_ButtonCloseApp;
         private System.Windows.Forms.Button m_ButtonMinimize;
         private System.Windows.Forms.RichTextBox m_RichTextBoxLoggingOutput;
@@ -521,9 +521,9 @@
         private System.Windows.Forms.CheckBox m_CheckBoxSmall;
         private System.Windows.Forms.CheckBox m_CheckBoxMedium;
         private System.Windows.Forms.CheckBox m_CheckBoxLarge;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown m_NumericUpDownSmall;
+        private System.Windows.Forms.NumericUpDown m_NumericUpDownMedium;
+        private System.Windows.Forms.NumericUpDown m_NumericUpDownLarge;
         private System.Windows.Forms.TextBox m_RichTextBoxMyTotalCost;
         private System.Windows.Forms.Label m_LabelMyTotalCost;
         private System.Windows.Forms.Panel panel1;

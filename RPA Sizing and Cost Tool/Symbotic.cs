@@ -313,12 +313,12 @@ namespace RPA_Sizing_and_Cost_Tool
         {
             if(m_CheckBoxSmall.Checked)
             {
-                numericUpDown1.Enabled = true;
+                m_NumericUpDownSmall.Enabled = true;
             }
             else
             {
-                numericUpDown1.Value = 0;
-                numericUpDown1.Enabled = false;
+                m_NumericUpDownSmall.Value = 0;
+                m_NumericUpDownSmall.Enabled = false;
             }
         }
 
@@ -326,12 +326,12 @@ namespace RPA_Sizing_and_Cost_Tool
         {
             if (m_CheckBoxMedium.Checked)
             {
-                numericUpDown2.Enabled = true;
+                m_NumericUpDownMedium.Enabled = true;
             }
             else
             {
-                numericUpDown2.Value = 0;
-                numericUpDown2.Enabled = false;
+                m_NumericUpDownMedium.Value = 0;
+                m_NumericUpDownMedium.Enabled = false;
             }
         }
 
@@ -339,26 +339,26 @@ namespace RPA_Sizing_and_Cost_Tool
         {
             if (m_CheckBoxLarge.Checked)
             {
-                numericUpDown3.Enabled = true;
+                m_NumericUpDownLarge.Enabled = true;
             }
             else
             {
-                numericUpDown3.Value = 0;
-                numericUpDown3.Enabled = false;
+                m_NumericUpDownLarge.Value = 0;
+                m_NumericUpDownLarge.Enabled = false;
             }
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void m_NumericUpDownSmall_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        private void m_NumericUpDownMedium_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        private void m_NumericUpDownLarge_ValueChanged(object sender, EventArgs e)
         {
 
         }
