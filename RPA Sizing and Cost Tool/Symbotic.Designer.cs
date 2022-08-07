@@ -1,6 +1,6 @@
 ﻿namespace RPA_Sizing_and_Cost_Tool
 {
-    partial class Frequency
+    partial class Symbotic
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frequency));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Symbotic));
             this.m_TextBoxProcessCount = new System.Windows.Forms.TextBox();
             this.m_TextBoxLicenseCount = new System.Windows.Forms.TextBox();
             this.m_TextBoxHoursSaved = new System.Windows.Forms.TextBox();

@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 
 namespace RPA_Sizing_and_Cost_Tool
 {
-    public partial class Frequency : Form
+    public partial class Symbotic : Form
     {
         private Point gStartLocation;
 
@@ -32,7 +32,7 @@ namespace RPA_Sizing_and_Cost_Tool
         private double? gMyTotalCost;
 
 
-        public Frequency()
+        public Symbotic()
         {
             // Init
             InitializeComponent();

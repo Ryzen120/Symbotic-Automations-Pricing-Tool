@@ -16,7 +16,7 @@ namespace RPA_Sizing_and_Cost_Tool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frequency());
+            Application.Run(new Symbotic());
         }
     }
 }
