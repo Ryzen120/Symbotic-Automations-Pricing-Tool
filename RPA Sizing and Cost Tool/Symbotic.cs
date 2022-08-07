@@ -311,17 +311,41 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_CheckBoxSmall_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(m_CheckBoxSmall.Checked)
+            {
+                numericUpDown1.Enabled = true;
+            }
+            else
+            {
+                numericUpDown1.Value = 0;
+                numericUpDown1.Enabled = false;
+            }
         }
 
         private void m_CheckBoxMedium_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (m_CheckBoxMedium.Checked)
+            {
+                numericUpDown2.Enabled = true;
+            }
+            else
+            {
+                numericUpDown2.Value = 0;
+                numericUpDown2.Enabled = false;
+            }
         }
 
         private void m_CheckBoxLarge_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (m_CheckBoxLarge.Checked)
+            {
+                numericUpDown3.Enabled = true;
+            }
+            else
+            {
+                numericUpDown3.Value = 0;
+                numericUpDown3.Enabled = false;
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
