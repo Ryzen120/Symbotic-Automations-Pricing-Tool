@@ -47,10 +47,10 @@
             this.m_LabelMyTotalProfit = new System.Windows.Forms.Label();
             this.m_LabelMyTotalNetProfit = new System.Windows.Forms.Label();
             this.m_PanelTitleBar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_ButtonMinimize = new System.Windows.Forms.Button();
             this.m_ButtonCloseApp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_RichTextBoxLoggingOutput = new System.Windows.Forms.RichTextBox();
             this.m_LabelLoggingOutput = new System.Windows.Forms.Label();
             this.m_CheckBoxSmall = new System.Windows.Forms.CheckBox();
@@ -62,9 +62,9 @@
             this.m_RichTextBoxMyTotalCost = new System.Windows.Forms.TextBox();
             this.m_LabelMyTotalCost = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_ButtonRPA = new System.Windows.Forms.Button();
-            this.m_ButtonScript = new System.Windows.Forms.Button();
             this.m_ButtonTool = new System.Windows.Forms.Button();
+            this.m_ButtonScript = new System.Windows.Forms.Button();
+            this.m_ButtonRPA = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -248,6 +248,18 @@
             this.m_PanelTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseMove);
             this.m_PanelTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.m_PanelTitleBar_MouseUp);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // m_ButtonMinimize
             // 
             this.m_ButtonMinimize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,21 +288,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(76, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 27);
+            this.label1.Size = new System.Drawing.Size(376, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Frequency Tool - Job Pricing";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label1.Text = "Symbotic Automations - Pricing Tool";
             // 
             // m_RichTextBoxLoggingOutput
             // 
@@ -400,18 +400,18 @@
             this.panel1.Size = new System.Drawing.Size(82, 396);
             this.panel1.TabIndex = 34;
             // 
-            // m_ButtonRPA
+            // m_ButtonTool
             // 
-            this.m_ButtonRPA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.m_ButtonRPA.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_ButtonRPA.ForeColor = System.Drawing.SystemColors.Control;
-            this.m_ButtonRPA.Location = new System.Drawing.Point(3, 14);
-            this.m_ButtonRPA.Name = "m_ButtonRPA";
-            this.m_ButtonRPA.Size = new System.Drawing.Size(76, 49);
-            this.m_ButtonRPA.TabIndex = 0;
-            this.m_ButtonRPA.Text = "RPA";
-            this.m_ButtonRPA.UseVisualStyleBackColor = true;
-            this.m_ButtonRPA.Click += new System.EventHandler(this.m_ButtonRPA_Click);
+            this.m_ButtonTool.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonTool.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonTool.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonTool.Location = new System.Drawing.Point(3, 110);
+            this.m_ButtonTool.Name = "m_ButtonTool";
+            this.m_ButtonTool.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonTool.TabIndex = 2;
+            this.m_ButtonTool.Text = "Tool";
+            this.m_ButtonTool.UseVisualStyleBackColor = true;
+            this.m_ButtonTool.Click += new System.EventHandler(this.m_ButtonTool_Click);
             // 
             // m_ButtonScript
             // 
@@ -426,18 +426,18 @@
             this.m_ButtonScript.UseVisualStyleBackColor = true;
             this.m_ButtonScript.Click += new System.EventHandler(this.m_ButtonScript_Click);
             // 
-            // m_ButtonTool
+            // m_ButtonRPA
             // 
-            this.m_ButtonTool.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.m_ButtonTool.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_ButtonTool.ForeColor = System.Drawing.SystemColors.Control;
-            this.m_ButtonTool.Location = new System.Drawing.Point(3, 110);
-            this.m_ButtonTool.Name = "m_ButtonTool";
-            this.m_ButtonTool.Size = new System.Drawing.Size(76, 49);
-            this.m_ButtonTool.TabIndex = 2;
-            this.m_ButtonTool.Text = "Tool";
-            this.m_ButtonTool.UseVisualStyleBackColor = true;
-            this.m_ButtonTool.Click += new System.EventHandler(this.m_ButtonTool_Click);
+            this.m_ButtonRPA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonRPA.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonRPA.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonRPA.Location = new System.Drawing.Point(3, 14);
+            this.m_ButtonRPA.Name = "m_ButtonRPA";
+            this.m_ButtonRPA.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonRPA.TabIndex = 0;
+            this.m_ButtonRPA.Text = "RPA";
+            this.m_ButtonRPA.UseVisualStyleBackColor = true;
+            this.m_ButtonRPA.Click += new System.EventHandler(this.m_ButtonRPA_Click);
             // 
             // Frequency
             // 
