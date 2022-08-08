@@ -8,33 +8,14 @@ namespace RPA_Sizing_and_Cost_Tool
 {
     class Calculate
     {
-        private int? gLicenseCount;
-        private int? gProcessCount;
-        private double? gHoursSaved;
-        private double? gHourlyWage;
-        private double? gTotalSavings;
-        private double? gTotalBusinessProfit;
-        private double? gMyProfit;
-        private double? gMyNetProfit;
-        private double? gMyTotalCost;
 
-        private decimal? gProcessCountSmall;
-        private decimal? gProcessCountMedium;
-        private decimal? gProcessCountLarge;
+        private double? gSmallSavings;
+        private double? gMediumSavings;
+        private double? gLargeSavings;
 
 
-        public Calculate(int? licenseCount, int? processCount, double? hoursSaved, double? hourlyWage, decimal? processCountSmall, decimal?  processCountMedium, decimal? processCountLarge)
+        public Calculate()
         {
-
-            gLicenseCount = licenseCount;
-            gProcessCount = processCount;
-            gHoursSaved = hoursSaved;
-            gHourlyWage = hourlyWage;
-
-            gProcessCountSmall = processCountSmall;
-            gProcessCountMedium = processCountMedium;
-            gProcessCountLarge = processCountLarge;
-
 
             CalculateTotalSavings();
 
@@ -48,39 +29,59 @@ namespace RPA_Sizing_and_Cost_Tool
 
         }
 
+        public void CalculateSmallSavings()
+        {
+            gSmallSavings = ((Globals.gHoursSavedSmall * Globals.gHourlyWageSmall) * 4) * Convert.ToInt32(Globals.gProcessCountSmall);
+        }
+
+        public void CalculateMediumSavings()
+        {
+            gMediumSavings = ((Globals.gHoursSavedMedium * Globals.gHourlyWageMedium) * 4) * Convert.ToInt32(Globals.gProcessCountMedium);
+        }
+
+        public void CalculateLargeSavings()
+        {
+            gLargeSavings = ((Globals.gHoursSavedLarge * Globals.gHourlyWageLarge) * 4) * Convert.ToInt32(Globals.gProcessCountLarge);
+        }
+
         public double? CalculateTotalSavings()
         {
+            // Calculate all size savings
+            CalculateSmallSavings();
+            CalculateMediumSavings();
+            CalculateLargeSavings();
+
             // Calcualte total savings from hours worked by employee and their corresponding wage
-            return gTotalSavings = ((gHoursSaved * gHourlyWage) *4) * gProcessCount;
+            return Globals.gTotalSavings = gLargeSavings + gMediumSavings + gSmallSavings;
         }
 
         public double? CalculateTotalBusinessProfit()
         {
-            gTotalBusinessProfit = gTotalSavings - (Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * gProcessCount));
-            return gTotalBusinessProfit;
+            //Globals.gTotalBusinessProfit = Globals.gTotalSavings - (Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * Convert.ToInt32(Globals.gProcessCount)));
+            return Globals.gTotalBusinessProfit;
         }
 
         public double? CalculateMyProfit()
         {
-            gMyProfit = Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * gProcessCount);
-            return gMyProfit;
+            //Globals.gMyProfit = Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * Convert.ToInt32(Globals.gProcessCount));
+            return Globals.gMyProfit;
         }
 
         public double? CalculateTaxDeducted()
         {
-            return gMyProfit * Globals.MO_TAX_RATE_2021;
+            return Globals.gMyProfit * Globals.MO_TAX_RATE_2021;
         }
 
         public double? CalculateMyNetProfit()
         {
-            gMyNetProfit = (gMyProfit - CalculateMyTotalCost());
-            return gMyNetProfit;
+            Globals.gMyNetProfit = (Globals.gMyProfit - CalculateMyTotalCost());
+            return Globals.gMyNetProfit;
         }
 
         public double? CalculateMyTotalCost()
         {
-            gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + CalculateTaxDeducted();
-            return gMyTotalCost;
+            Globals.gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + CalculateTaxDeducted();
+            return Globals.gMyTotalCost;
         }
 
     }

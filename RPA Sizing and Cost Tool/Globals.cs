@@ -30,5 +30,28 @@ namespace RPA_Sizing_and_Cost_Tool
         public static double QUICKBOOKS_FEE = 65.00;
         public static double DOMAIN_FEE = 23.00;
 
+        // Values from user
+        public static int? gLicenseCount;
+
+        public static double? gHoursSavedSmall;
+        public static double? gHourlyWageSmall;
+
+        public static double? gHoursSavedMedium;
+        public static double? gHourlyWageMedium;
+
+        public static double? gHoursSavedLarge;
+        public static double? gHourlyWageLarge;
+
+        public static double? gTotalSavings;
+        public static double? gTotalBusinessProfit;
+        public static double? gMyProfit;
+        public static double? gMyNetProfit;
+        public static double? gMyTotalCost;
+
+        public static decimal? gProcessCountSmall;
+        public static decimal? gProcessCountMedium;
+        public static decimal? gProcessCountLarge;
+
+
     }
 }

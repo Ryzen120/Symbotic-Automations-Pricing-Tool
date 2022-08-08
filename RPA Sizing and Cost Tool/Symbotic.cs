@@ -21,19 +21,6 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private int[] gStartPoint;
 
-        private int? gLicenseCount;
-        private int? gProcessCount;
-        private double? gHoursSaved;
-        private double? gHourlyWage;
-        private double? gTotalSavings;
-        private double? gTotalBusinessProfit;
-        private double? gMyProfit;
-        private double? gMyNetProfit;
-        private double? gMyTotalCost;
-
-        private decimal? gProcessCountSmall;
-        private decimal? gProcessCountMedium;
-        private decimal? gProcessCountLarge;
 
         public Symbotic()
         {
@@ -53,94 +40,158 @@ namespace RPA_Sizing_and_Cost_Tool
             {
                 if(!String.IsNullOrEmpty(m_TextBoxLicenseCount.Text))
                 {
-                    gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
+                    Globals.gLicenseCount = Int32.Parse(m_TextBoxLicenseCount.Text);
                 }
                 else
                 {
                     m_TextBoxLicenseCount.Text = "0";
-                    gLicenseCount = 0;
+                    Globals.gLicenseCount = 0;
                 }
             }
         }
 
-        private void m_TextBoxProcessCount_TextChanged(object sender, EventArgs e)
+        // SMALL FIELDS
+        private void m_TextBoxHoursSavedSmall_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxProcessCount.Text, " ^ [0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHoursSavedSmall.Text, " ^ [0-9]"))
             {
-                m_TextBoxProcessCount.Text = "";
+                m_TextBoxHoursSavedSmall.Text = "";
             }
             else
             {
-                if (!String.IsNullOrEmpty(m_TextBoxProcessCount.Text))
+                if (!String.IsNullOrEmpty(m_TextBoxHoursSavedSmall.Text))
                 {
-                    gProcessCount = Int32.Parse(m_TextBoxProcessCount.Text);
+                    Globals.gHoursSavedSmall = Double.Parse(m_TextBoxHoursSavedSmall.Text);
                 }
                 else
                 {
-                    m_TextBoxProcessCount.Text = "0";
-                    gProcessCount = 0;
-                }
-            }
-        }
-        
-        private void m_TextBoxHoursSaved_TextChanged(object sender, EventArgs e)
-        {
-            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHoursSaved.Text, " ^ [0-9]"))
-            {
-                m_TextBoxHoursSaved.Text = "";
-            }
-            else
-            {
-                if (!String.IsNullOrEmpty(m_TextBoxHoursSaved.Text))
-                {
-                    gHoursSaved = Double.Parse(m_TextBoxHoursSaved.Text);
-                }
-                else
-                {
-                    m_TextBoxHoursSaved.Text = "0";
-                    gHoursSaved = 0;
+                    m_TextBoxHoursSavedSmall.Text = "0";
+                    Globals.gHoursSavedSmall = 0;
                 }
             }
         }
 
-        private void m_TextBoxHourlyWage_TextChanged(object sender, EventArgs e)
+        private void m_TextBoxHourlyWageSmall_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHourlyWage.Text, " ^ [0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHourlyWageSmall.Text, " ^ [0-9]"))
             {
-                m_TextBoxHourlyWage.Text = "";
+                m_TextBoxHourlyWageSmall.Text = "";
             }
             else
             {
-                if (!String.IsNullOrEmpty(m_TextBoxHourlyWage.Text))
+                if (!String.IsNullOrEmpty(m_TextBoxHourlyWageSmall.Text))
                 {
-                    gHourlyWage = Double.Parse(m_TextBoxHourlyWage.Text);
+                    Globals.gHourlyWageSmall = Double.Parse(m_TextBoxHourlyWageSmall.Text);
                 }
                 else
                 {
-                    m_TextBoxHourlyWage.Text = "0";
-                    gHourlyWage = 0;
+                    m_TextBoxHourlyWageSmall.Text = "0";
+                    Globals.gHourlyWageSmall = 0;
                 }
             }
         }
 
+        // MEDIUM FIELDS
+        private void m_TextBoxHoursSavedMedium_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHoursSavedMedium.Text, " ^ [0-9]"))
+            {
+                m_TextBoxHoursSavedMedium.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHoursSavedMedium.Text))
+                {
+                    Globals.gHoursSavedMedium = Double.Parse(m_TextBoxHoursSavedMedium.Text);
+                }
+                else
+                {
+                    m_TextBoxHoursSavedMedium.Text = "0";
+                    Globals.gHoursSavedMedium = 0;
+                }
+            }
+        }
+
+        private void m_TextBoxHourlyWageMedium_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHourlyWageMedium.Text, " ^ [0-9]"))
+            {
+                m_TextBoxHourlyWageMedium.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHourlyWageMedium.Text))
+                {
+                    Globals.gHourlyWageMedium = Double.Parse(m_TextBoxHourlyWageMedium.Text);
+                }
+                else
+                {
+                    m_TextBoxHourlyWageMedium.Text = "0";
+                    Globals.gHourlyWageMedium = 0;
+                }
+            }
+        }
+
+        // LARGE FIELDS
+        private void m_TextBoxHoursSavedLarge_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHoursSavedLarge.Text, " ^ [0-9]"))
+            {
+                m_TextBoxHoursSavedLarge.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHoursSavedLarge.Text))
+                {
+                    Globals.gHoursSavedLarge = Double.Parse(m_TextBoxHoursSavedLarge.Text);
+                }
+                else
+                {
+                    m_TextBoxHoursSavedLarge.Text = "0";
+                    Globals.gHoursSavedLarge = 0;
+                }
+            }
+        }
+
+        private void m_TextBoxHourlyWageLarge_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(m_TextBoxHourlyWageLarge.Text, " ^ [0-9]"))
+            {
+                m_TextBoxHourlyWageLarge.Text = "";
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(m_TextBoxHourlyWageLarge.Text))
+                {
+                    Globals.gHourlyWageLarge = Double.Parse(m_TextBoxHourlyWageLarge.Text);
+                }
+                else
+                {
+                    m_TextBoxHourlyWageLarge.Text = "0";
+                    Globals.gHourlyWageLarge = 0;
+                }
+            }
+        }
+
+        // OUTPUT FIELDS
         private void m_RichTextBoxTotalBusinessSavings_TextChanged(object sender, EventArgs e)
         {
-            m_RichTextBoxTotalBusinessSavings.Text = gTotalSavings.ToString();
+            m_RichTextBoxTotalBusinessSavings.Text = Globals.gTotalSavings.ToString();
         }
 
         private void m_RichTextBoxTotalBusinessProfit_TextChanged(object sender, EventArgs e)
         {
-            m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
+            m_RichTextBoxTotalBusinessProfit.Text = Globals.gTotalBusinessProfit.ToString();
         }
 
         private void m_RichTextBoxMyTotalProfit_TextChanged(object sender, EventArgs e)
         {
-            m_RichTextBoxMyTotalProfit.Text = gMyProfit.ToString();
+            m_RichTextBoxMyTotalProfit.Text = Globals.gMyProfit.ToString();
         }
 
         private void m_RichTextBoxMyNetProfit_TextChanged(object sender, EventArgs e)
         {
-            m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
+            m_RichTextBoxMyNetProfit.Text = Globals.gMyNetProfit.ToString();
         }
 
         private void m_RichTextBoxMyTotalCost_TextChanged(object sender, EventArgs e)
@@ -155,14 +206,14 @@ namespace RPA_Sizing_and_Cost_Tool
             m_RichTextBoxMyTotalProfit.Text = "0";
             m_RichTextBoxMyNetProfit.Text = "0";
 
-            Calculate calc = new Calculate(gLicenseCount, gProcessCount, gHoursSaved, gHourlyWage, gProcessCountSmall, gProcessCountMedium, gProcessCountLarge);
+            Calculate calc = new Calculate();
 
             // If either hours saved or hourly wage is null, we cant calculate total savings, so throw error.
-            if(!(gHoursSaved == null) || !(gHourlyWage == null))
+            if(!(Convert.ToInt32(Globals.gProcessCountSmall) == 0 && Convert.ToInt32(Globals.gProcessCountMedium) == 0 && Convert.ToInt32(Globals.gProcessCountLarge) == 0))
             {
-                gTotalSavings = calc.CalculateTotalSavings();
+                Globals.gTotalSavings = calc.CalculateTotalSavings();
 
-                m_RichTextBoxTotalBusinessSavings.Text = gTotalSavings.ToString();
+                m_RichTextBoxTotalBusinessSavings.Text = Globals.gTotalSavings.ToString();
             }
             else
             {
@@ -170,11 +221,11 @@ namespace RPA_Sizing_and_Cost_Tool
             }
             
             // If we dont have total savings calculated, we cant calculate the busiess profit
-            if(!(gTotalSavings == null))
+            if(!(Globals.gTotalSavings == null))
             {
-                gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
+                Globals.gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
 
-                m_RichTextBoxTotalBusinessProfit.Text = gTotalBusinessProfit.ToString();
+                m_RichTextBoxTotalBusinessProfit.Text = Globals.gTotalBusinessProfit.ToString();
             }
             else
             {
@@ -182,15 +233,15 @@ namespace RPA_Sizing_and_Cost_Tool
             }
 
             // My profit is based on globals values, so cant be null.
-            gMyProfit = calc.CalculateMyProfit();
-            m_RichTextBoxMyTotalProfit.Text = gMyProfit.ToString();
+            Globals.gMyProfit = calc.CalculateMyProfit();
+            m_RichTextBoxMyTotalProfit.Text = Globals.gMyProfit.ToString();
 
             // My profit is based on globals values, so cant be null.
-            gMyNetProfit = calc.CalculateMyNetProfit();
-            m_RichTextBoxMyNetProfit.Text = gMyNetProfit.ToString();
+            Globals.gMyNetProfit = calc.CalculateMyNetProfit();
+            m_RichTextBoxMyNetProfit.Text = Globals.gMyNetProfit.ToString();
 
-            gMyTotalCost = calc.CalculateMyTotalCost();
-            m_RichTextBoxMyTotalCost.Text = gMyTotalCost.ToString();
+            Globals.gMyTotalCost = calc.CalculateMyTotalCost();
+            m_RichTextBoxMyTotalCost.Text = Globals.gMyTotalCost.ToString();
 
 
 
@@ -353,17 +404,17 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_NumericUpDownSmall_ValueChanged(object sender, EventArgs e)
         {
-            gProcessCountSmall = m_NumericUpDownSmall.Value;
+            Globals.gProcessCountSmall = m_NumericUpDownSmall.Value;
         }
 
         private void m_NumericUpDownMedium_ValueChanged(object sender, EventArgs e)
         {
-            gProcessCountMedium = m_NumericUpDownMedium.Value;
+            Globals.gProcessCountMedium = m_NumericUpDownMedium.Value;
         }
 
         private void m_NumericUpDownLarge_ValueChanged(object sender, EventArgs e)
         {
-            gProcessCountLarge = m_NumericUpDownLarge.Value;
+            Globals.gProcessCountLarge = m_NumericUpDownLarge.Value;
         }
 
         private void m_ButtonRPA_Click(object sender, EventArgs e)
@@ -380,5 +431,7 @@ namespace RPA_Sizing_and_Cost_Tool
         {
 
         }
+
+
     }
 }
