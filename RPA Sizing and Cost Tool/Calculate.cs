@@ -92,7 +92,7 @@ namespace RPA_Sizing_and_Cost_Tool
 
         public void CalculateMyTotalCost()
         {
-            Globals.gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + Globals.gMyTaxDeducted;
+            Globals.gMyTotalCost = Globals.DEV_LICENSE + (Globals.LICENSE_COST * Globals.gLicenseCount) + Globals.gMyTaxDeducted + Globals.QUICKBOOKS_FEE + Globals.MICROSOFT_FEE + Globals.DOMAIN_FEE;
         }
     }
 }

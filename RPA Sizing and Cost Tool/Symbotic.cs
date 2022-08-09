@@ -206,6 +206,12 @@ namespace RPA_Sizing_and_Cost_Tool
             m_RichTextBoxMyTotalProfit.Text = "0";
             m_RichTextBoxMyNetProfit.Text = "0";
 
+            if (Globals.gLicenseCount == 0 || Globals.gLicenseCount == null)
+            {
+                MessageBox.Show("License count must be at least 1.", "Error: Cant calculate field");
+                return;
+            }
+
             Calculate calc = new Calculate();
 
             // If either hours saved or hourly wage is null, we cant calculate total savings, so throw error.
@@ -426,12 +432,12 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_ButtonRPA_Click(object sender, EventArgs e)
         {
-
+            //m_PanelScript.SendToBack();
         }
 
         private void m_ButtonScript_Click(object sender, EventArgs e)
         {
-                
+            //m_PanelScript.BringToFront();
         }
 
         private void m_ButtonTool_Click(object sender, EventArgs e)

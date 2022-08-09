@@ -30,6 +30,7 @@ namespace RPA_Sizing_and_Cost_Tool
         // Overhead fees for business
         public static double QUICKBOOKS_FEE = 65.00;
         public static double DOMAIN_FEE = 23.00;
+        public static double MICROSOFT_FEE = 12.50;
 
         // Values from user
         public static int? gLicenseCount;

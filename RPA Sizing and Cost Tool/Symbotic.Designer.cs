@@ -61,6 +61,7 @@
             this.m_RichTextBoxMyTotalCost = new System.Windows.Forms.TextBox();
             this.m_LabelMyTotalCost = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_ButtonLogs = new System.Windows.Forms.Button();
             this.m_ButtonTool = new System.Windows.Forms.Button();
             this.m_ButtonScript = new System.Windows.Forms.Button();
             this.m_ButtonRPA = new System.Windows.Forms.Button();
@@ -72,7 +73,6 @@
             this.m_TextBoxHourlyWageSmall = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.m_TextBoxHoursSavedSmall = new System.Windows.Forms.TextBox();
-            this.m_ButtonLogs = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownSmall)).BeginInit();
@@ -406,6 +406,19 @@
             this.panel1.Size = new System.Drawing.Size(82, 396);
             this.panel1.TabIndex = 34;
             // 
+            // m_ButtonLogs
+            // 
+            this.m_ButtonLogs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonLogs.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonLogs.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonLogs.Location = new System.Drawing.Point(3, 163);
+            this.m_ButtonLogs.Name = "m_ButtonLogs";
+            this.m_ButtonLogs.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonLogs.TabIndex = 3;
+            this.m_ButtonLogs.Text = "Logs";
+            this.m_ButtonLogs.UseVisualStyleBackColor = true;
+            this.m_ButtonLogs.Click += new System.EventHandler(this.m_ButtonLogs_Click);
+            // 
             // m_ButtonTool
             // 
             this.m_ButtonTool.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -516,19 +529,6 @@
             this.m_TextBoxHoursSavedSmall.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHoursSavedSmall.TabIndex = 39;
             this.m_TextBoxHoursSavedSmall.TextChanged += new System.EventHandler(this.m_TextBoxHoursSavedSmall_TextChanged);
-            // 
-            // m_ButtonLogs
-            // 
-            this.m_ButtonLogs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.m_ButtonLogs.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_ButtonLogs.ForeColor = System.Drawing.SystemColors.Control;
-            this.m_ButtonLogs.Location = new System.Drawing.Point(3, 163);
-            this.m_ButtonLogs.Name = "m_ButtonLogs";
-            this.m_ButtonLogs.Size = new System.Drawing.Size(76, 49);
-            this.m_ButtonLogs.TabIndex = 3;
-            this.m_ButtonLogs.Text = "Logs";
-            this.m_ButtonLogs.UseVisualStyleBackColor = true;
-            this.m_ButtonLogs.Click += new System.EventHandler(this.m_ButtonLogs_Click);
             // 
             // Symbotic
             // 
