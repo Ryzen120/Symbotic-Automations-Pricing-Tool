@@ -25,6 +25,7 @@ namespace RPA_Sizing_and_Cost_Tool
 
         // Tax rate for state of operation
         public static double MO_TAX_RATE_2021 = 0.27;
+        public static double? gMyTaxDeducted;
 
         // Overhead fees for business
         public static double QUICKBOOKS_FEE = 65.00;

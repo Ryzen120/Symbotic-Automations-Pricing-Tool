@@ -72,6 +72,7 @@
             this.m_TextBoxHourlyWageSmall = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.m_TextBoxHoursSavedSmall = new System.Windows.Forms.TextBox();
+            this.m_ButtonLogs = new System.Windows.Forms.Button();
             this.m_PanelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NumericUpDownSmall)).BeginInit();
@@ -91,6 +92,7 @@
             // 
             // m_TextBoxHoursSavedLarge
             // 
+            this.m_TextBoxHoursSavedLarge.Enabled = false;
             this.m_TextBoxHoursSavedLarge.Location = new System.Drawing.Point(169, 322);
             this.m_TextBoxHoursSavedLarge.Name = "m_TextBoxHoursSavedLarge";
             this.m_TextBoxHoursSavedLarge.Size = new System.Drawing.Size(100, 20);
@@ -127,7 +129,8 @@
             // 
             // m_TextBoxHourlyWageLarge
             // 
-            this.m_TextBoxHourlyWageLarge.Location = new System.Drawing.Point(169, 348);
+            this.m_TextBoxHourlyWageLarge.Enabled = false;
+            this.m_TextBoxHourlyWageLarge.Location = new System.Drawing.Point(169, 345);
             this.m_TextBoxHourlyWageLarge.Name = "m_TextBoxHourlyWageLarge";
             this.m_TextBoxHourlyWageLarge.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHourlyWageLarge.TabIndex = 3;
@@ -394,6 +397,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.m_ButtonLogs);
             this.panel1.Controls.Add(this.m_ButtonTool);
             this.panel1.Controls.Add(this.m_ButtonScript);
             this.panel1.Controls.Add(this.m_ButtonRPA);
@@ -444,7 +448,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 259);
+            this.label1.Location = new System.Drawing.Point(94, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 38;
@@ -452,7 +456,8 @@
             // 
             // m_TextBoxHourlyWageMedium
             // 
-            this.m_TextBoxHourlyWageMedium.Location = new System.Drawing.Point(169, 256);
+            this.m_TextBoxHourlyWageMedium.Enabled = false;
+            this.m_TextBoxHourlyWageMedium.Location = new System.Drawing.Point(169, 252);
             this.m_TextBoxHourlyWageMedium.Name = "m_TextBoxHourlyWageMedium";
             this.m_TextBoxHourlyWageMedium.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHourlyWageMedium.TabIndex = 36;
@@ -469,6 +474,7 @@
             // 
             // m_TextBoxHoursSavedMedium
             // 
+            this.m_TextBoxHoursSavedMedium.Enabled = false;
             this.m_TextBoxHoursSavedMedium.Location = new System.Drawing.Point(169, 230);
             this.m_TextBoxHoursSavedMedium.Name = "m_TextBoxHoursSavedMedium";
             this.m_TextBoxHoursSavedMedium.Size = new System.Drawing.Size(100, 20);
@@ -486,6 +492,7 @@
             // 
             // m_TextBoxHourlyWageSmall
             // 
+            this.m_TextBoxHourlyWageSmall.Enabled = false;
             this.m_TextBoxHourlyWageSmall.Location = new System.Drawing.Point(169, 163);
             this.m_TextBoxHourlyWageSmall.Name = "m_TextBoxHourlyWageSmall";
             this.m_TextBoxHourlyWageSmall.Size = new System.Drawing.Size(100, 20);
@@ -503,11 +510,25 @@
             // 
             // m_TextBoxHoursSavedSmall
             // 
+            this.m_TextBoxHoursSavedSmall.Enabled = false;
             this.m_TextBoxHoursSavedSmall.Location = new System.Drawing.Point(169, 140);
             this.m_TextBoxHoursSavedSmall.Name = "m_TextBoxHoursSavedSmall";
             this.m_TextBoxHoursSavedSmall.Size = new System.Drawing.Size(100, 20);
             this.m_TextBoxHoursSavedSmall.TabIndex = 39;
             this.m_TextBoxHoursSavedSmall.TextChanged += new System.EventHandler(this.m_TextBoxHoursSavedSmall_TextChanged);
+            // 
+            // m_ButtonLogs
+            // 
+            this.m_ButtonLogs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.m_ButtonLogs.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_ButtonLogs.ForeColor = System.Drawing.SystemColors.Control;
+            this.m_ButtonLogs.Location = new System.Drawing.Point(3, 163);
+            this.m_ButtonLogs.Name = "m_ButtonLogs";
+            this.m_ButtonLogs.Size = new System.Drawing.Size(76, 49);
+            this.m_ButtonLogs.TabIndex = 3;
+            this.m_ButtonLogs.Text = "Logs";
+            this.m_ButtonLogs.UseVisualStyleBackColor = true;
+            this.m_ButtonLogs.Click += new System.EventHandler(this.m_ButtonLogs_Click);
             // 
             // Symbotic
             // 
@@ -610,6 +631,7 @@
         private System.Windows.Forms.TextBox m_TextBoxHourlyWageSmall;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_TextBoxHoursSavedSmall;
+        private System.Windows.Forms.Button m_ButtonLogs;
     }
 }
 

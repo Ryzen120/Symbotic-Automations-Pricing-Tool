@@ -16,35 +16,50 @@ namespace RPA_Sizing_and_Cost_Tool
 
         public Calculate()
         {
-
             CalculateTotalSavings();
-
-            CalculateTotalBusinessProfit();
 
             CalculateMyProfit();
 
-            CalculateMyNetProfit();
+            CalculateTotalBusinessProfit();
+
+            CalculateTaxDeducted();
 
             CalculateMyTotalCost();
 
+            CalculateMyNetProfit();
         }
 
         public void CalculateSmallSavings()
         {
             gSmallSavings = ((Globals.gHoursSavedSmall * Globals.gHourlyWageSmall) * 4) * Convert.ToInt32(Globals.gProcessCountSmall);
+
+            if(gSmallSavings == null)
+            {
+                gSmallSavings = 0.0;
+            }
         }
 
         public void CalculateMediumSavings()
         {
             gMediumSavings = ((Globals.gHoursSavedMedium * Globals.gHourlyWageMedium) * 4) * Convert.ToInt32(Globals.gProcessCountMedium);
+
+            if (gMediumSavings == null)
+            {
+                gMediumSavings = 0.0;
+            }
         }
 
         public void CalculateLargeSavings()
         {
             gLargeSavings = ((Globals.gHoursSavedLarge * Globals.gHourlyWageLarge) * 4) * Convert.ToInt32(Globals.gProcessCountLarge);
+
+            if (gLargeSavings == null)
+            {
+                gLargeSavings = 0.0;
+            }
         }
 
-        public double? CalculateTotalSavings()
+        public void CalculateTotalSavings()
         {
             // Calculate all size savings
             CalculateSmallSavings();
@@ -52,37 +67,32 @@ namespace RPA_Sizing_and_Cost_Tool
             CalculateLargeSavings();
 
             // Calcualte total savings from hours worked by employee and their corresponding wage
-            return Globals.gTotalSavings = gLargeSavings + gMediumSavings + gSmallSavings;
+            Globals.gTotalSavings = gLargeSavings + gMediumSavings + gSmallSavings;
         }
 
-        public double? CalculateTotalBusinessProfit()
+        public void CalculateTotalBusinessProfit()
         {
-            //Globals.gTotalBusinessProfit = Globals.gTotalSavings - (Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * Convert.ToInt32(Globals.gProcessCount)));
-            return Globals.gTotalBusinessProfit;
+            Globals.gTotalBusinessProfit = Globals.gTotalSavings - Globals.gMyProfit;
         }
 
-        public double? CalculateMyProfit()
+        public void CalculateMyProfit()
         {
-            //Globals.gMyProfit = Globals.LICENSE_COST + Globals.DEV_FEE_LICENSE_PROFIT + (Globals.DEV_FEE_MEDIUM * Convert.ToInt32(Globals.gProcessCount));
-            return Globals.gMyProfit;
+            Globals.gMyProfit = (Globals.LICENSE_COST * Globals.gLicenseCount) + (Globals.DEV_FEE_LICENSE_PROFIT * Globals.gLicenseCount) + (Globals.DEV_FEE_SMALL * Convert.ToInt32(Globals.gProcessCountSmall)) + (Globals.DEV_FEE_MEDIUM * Convert.ToInt32(Globals.gProcessCountMedium)) + (Globals.DEV_FEE_LARGE * Convert.ToInt32(Globals.gProcessCountLarge));
         }
 
-        public double? CalculateTaxDeducted()
+        public void CalculateTaxDeducted()
         {
-            return Globals.gMyProfit * Globals.MO_TAX_RATE_2021;
+            Globals.gMyTaxDeducted = Globals.gMyProfit * Globals.MO_TAX_RATE_2021;
         }
 
-        public double? CalculateMyNetProfit()
+        public void CalculateMyNetProfit()
         {
-            Globals.gMyNetProfit = (Globals.gMyProfit - CalculateMyTotalCost());
-            return Globals.gMyNetProfit;
+            Globals.gMyNetProfit = (Globals.gMyProfit - Globals.gMyTotalCost);
         }
 
-        public double? CalculateMyTotalCost()
+        public void CalculateMyTotalCost()
         {
-            Globals.gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + CalculateTaxDeducted();
-            return Globals.gMyTotalCost;
+            Globals.gMyTotalCost = Globals.DEV_LICENSE + Globals.LICENSE_COST + Globals.gMyTaxDeducted;
         }
-
     }
 }

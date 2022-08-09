@@ -196,7 +196,7 @@ namespace RPA_Sizing_and_Cost_Tool
 
         private void m_RichTextBoxMyTotalCost_TextChanged(object sender, EventArgs e)
         {
-
+            m_RichTextBoxMyTotalCost.Text = Globals.gMyTotalCost.ToString();
         }
 
         private void m_ButtonStart_Click(object sender, EventArgs e)
@@ -211,8 +211,6 @@ namespace RPA_Sizing_and_Cost_Tool
             // If either hours saved or hourly wage is null, we cant calculate total savings, so throw error.
             if(!(Convert.ToInt32(Globals.gProcessCountSmall) == 0 && Convert.ToInt32(Globals.gProcessCountMedium) == 0 && Convert.ToInt32(Globals.gProcessCountLarge) == 0))
             {
-                Globals.gTotalSavings = calc.CalculateTotalSavings();
-
                 m_RichTextBoxTotalBusinessSavings.Text = Globals.gTotalSavings.ToString();
             }
             else
@@ -223,8 +221,6 @@ namespace RPA_Sizing_and_Cost_Tool
             // If we dont have total savings calculated, we cant calculate the busiess profit
             if(!(Globals.gTotalSavings == null))
             {
-                Globals.gTotalBusinessProfit = calc.CalculateTotalBusinessProfit();
-
                 m_RichTextBoxTotalBusinessProfit.Text = Globals.gTotalBusinessProfit.ToString();
             }
             else
@@ -232,19 +228,13 @@ namespace RPA_Sizing_and_Cost_Tool
                 MessageBox.Show("Total savings could not be calculated, cannot calculate total business profit.", "Error: Cant calculate field");
             }
 
-            // My profit is based on globals values, so cant be null.
-            Globals.gMyProfit = calc.CalculateMyProfit();
+           
             m_RichTextBoxMyTotalProfit.Text = Globals.gMyProfit.ToString();
 
-            // My profit is based on globals values, so cant be null.
-            Globals.gMyNetProfit = calc.CalculateMyNetProfit();
             m_RichTextBoxMyNetProfit.Text = Globals.gMyNetProfit.ToString();
-
-            Globals.gMyTotalCost = calc.CalculateMyTotalCost();
+            
             m_RichTextBoxMyTotalCost.Text = Globals.gMyTotalCost.ToString();
-
-
-
+ 
         }
 
         private void m_PanelTitleBar_MouseMove(object sender, MouseEventArgs e)
@@ -368,11 +358,16 @@ namespace RPA_Sizing_and_Cost_Tool
             if(m_CheckBoxSmall.Checked)
             {
                 m_NumericUpDownSmall.Enabled = true;
+                m_TextBoxHourlyWageSmall.Enabled = true;
+                m_TextBoxHoursSavedSmall.Enabled = true;
             }
             else
             {
                 m_NumericUpDownSmall.Value = 0;
                 m_NumericUpDownSmall.Enabled = false;
+
+                m_TextBoxHourlyWageSmall.Enabled = false;
+                m_TextBoxHoursSavedSmall.Enabled = false;
             }
         }
 
@@ -381,11 +376,17 @@ namespace RPA_Sizing_and_Cost_Tool
             if (m_CheckBoxMedium.Checked)
             {
                 m_NumericUpDownMedium.Enabled = true;
+
+                m_TextBoxHourlyWageMedium.Enabled = true;
+                m_TextBoxHoursSavedMedium.Enabled = true;
             }
             else
             {
                 m_NumericUpDownMedium.Value = 0;
                 m_NumericUpDownMedium.Enabled = false;
+
+                m_TextBoxHourlyWageMedium.Enabled = false;
+                m_TextBoxHoursSavedMedium.Enabled = false;
             }
         }
 
@@ -394,11 +395,17 @@ namespace RPA_Sizing_and_Cost_Tool
             if (m_CheckBoxLarge.Checked)
             {
                 m_NumericUpDownLarge.Enabled = true;
+
+                m_TextBoxHourlyWageLarge.Enabled = true;
+                m_TextBoxHoursSavedLarge.Enabled = true;
             }
             else
             {
                 m_NumericUpDownLarge.Value = 0;
                 m_NumericUpDownLarge.Enabled = false;
+
+                m_TextBoxHourlyWageLarge.Enabled = false;
+                m_TextBoxHoursSavedLarge.Enabled = false;
             }
         }
 
@@ -432,6 +439,9 @@ namespace RPA_Sizing_and_Cost_Tool
 
         }
 
+        private void m_ButtonLogs_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
